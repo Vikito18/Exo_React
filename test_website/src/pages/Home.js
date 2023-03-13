@@ -1,11 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-red-300">
       <h1>Welcome</h1>
-      <Navbar />
     </div>
   );
 };
