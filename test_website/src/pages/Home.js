@@ -1,15 +1,10 @@
 import React from "react";
-import Nav from "../components/Nav";
 import Page from "../components/Page";
 import profile from "../img/profile.png";
 
 const Home = () => {
   return (
-    <Page>
-      <div className="flex-col flex items-center sm:items-center">
-        <h1 className="flex text-xxl font-extrabold">Welcome</h1>
-        <Nav />
-      </div>
+    <Page title="Welcome">
       <div className="flex flex-row justify-around items-center w-[100%]">
         <img
           src={profile}
