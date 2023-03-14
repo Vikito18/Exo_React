@@ -1,6 +1,8 @@
 import React from "react";
 import Page from "../components/Page";
 import logo from "../img/logo.png";
+import react from "../img/react.png";
+import node from "../img/node.png";
 
 const Cv = () => {
   return (
@@ -14,6 +16,10 @@ const Cv = () => {
           <section className="flex flex-col items-center border-2 w-[50%]">
             <h1>Mes compétences</h1>
             <img className="w-[80%]" src={logo} />
+            <div className="flex flex-row justify-center">
+              <img className="w-[35%]" src={react} />
+              <img className="w-[35%]" src={node} />
+            </div>
           </section>
         </div>
       </div>
