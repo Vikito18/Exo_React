@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Cv from "./pages/Cv";
 import Home from "./pages/Home";
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Cv" element={<Cv />} />
       </Routes>
     </BrowserRouter>
   );

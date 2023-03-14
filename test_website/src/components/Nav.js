@@ -12,7 +12,7 @@ const Nav = () => {
       </NavLink>
       <NavLink
         className="bg-gray-800 flex items-center justify-center p-10 rounded-xl border-gray-500 border-solid border-2 h-[100%] w-[100%] hover:bg-gray-400 hover:text-black"
-        to="/"
+        to="/cv"
       >
         <li>Mon CV</li>
       </NavLink>
