@@ -14,7 +14,7 @@ export const PageHeader = (props) => {
 const Page = (props) => {
   const { children, title } = props;
   return (
-    <div className="h-screen overflow-auto bg-gray-900 text-gray-400 flex flex-col">
+    <div className="h-screen overflow-auto bg-gray-900 text-gray-300 flex flex-col">
       <PageHeader title={title} />
       {children}
     </div>
