@@ -19,6 +19,12 @@ const Home = () => {
         <h2 className="flex flex-col text-lg sm:text-xl lg:text-xxl font-extrabold ">
           <span className="flex self-center">Victor</span>{" "}
           <span className="flex self-center">DOS MARTIRES</span>
+          <p className="lg:pt-10  pt-5 flex flex-col lg:flex-row">
+            Développeur{" "}
+            <span className="flex lg:self-center justify-self-center text-yellow-600">
+              JavaScript
+            </span>
+          </p>
         </h2>
       </div>
     </Page>
