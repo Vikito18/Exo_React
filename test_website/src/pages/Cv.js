@@ -46,9 +46,9 @@ const Cv = () => {
             </div>
             <img className="w-[20%] pt-10" src={psql} alt="logo_psql" />
           </section>
-          <section className="flex flex-col mt-20 pt-5 justify-center items-center rounded-full bg-gray-600  items-center sm:h-[80%] w-[80%] sm:w-[40%]">
+          <section className="flex flex-col mt-20 pt-200 justify-center items-center rounded-full bg-gray-600  items-center sm:h-[80%] w-[80%] sm:w-[45%]">
             <h1>Parcours</h1>
-            <ul className="lg:text-lg text-base flex flex-col text-center items-center w-[100%]">
+            <ul className="lg:text-lg text-base flex flex-col text-center items-center sm:w-[75%]">
               <li className="flex pt-10 pb-8 w-[100%]">
                 Certificat professionnel Développeur et Concepteur d'application
                 mobile
@@ -56,7 +56,7 @@ const Cv = () => {
               <li className=" pb-8">
                 Cértificat Développeur d'application web /web mobile
               </li>
-              <li className=" pb-8">
+              <li className=" pb-20">
                 Bachelor en Management Marketing événementiel
               </li>
               <li></li>
