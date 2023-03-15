@@ -1,4 +1,5 @@
 import React from "react";
+import Countries from "./component/Countries";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <li className="hover:bg-gray-500 w-[100%] rounded-full ">Asie</li>
         <li className="hover:bg-gray-500 w-[100%] rounded-full ">Océanie</li>
       </ul>
+      <Countries />
     </div>
   );
 };
