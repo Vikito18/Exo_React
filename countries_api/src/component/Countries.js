@@ -35,7 +35,11 @@ const Countries = () => {
             </p>
             <p>
               Population :{" "}
-              <span className="font-extrabold">{country.population}</span>
+              <span className="font-extrabold">
+                {new Intl.NumberFormat(["ban", "id"]).format(
+                  country.population
+                )}
+              </span>
             </p>
           </div>
         </li>
