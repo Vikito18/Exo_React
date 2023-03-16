@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Cards from "./Cards";
 
 const Countries = () => {
   const [countries, setCountries] = useState([]);
-
   useEffect(() => {
     axios
       .get("https://restcountries.com/v3.1/all")
@@ -13,36 +13,21 @@ const Countries = () => {
   return (
     <ul className="flex flex-wrap justify-around items-center">
       {countries.map((country, index) => (
-        <li
-          className="m-5 pb-5 bg-gray-900 text-white h-min rounded-3xl flex-flex-col w-[80%] sm:w-[30%] md:w-[25%]"
+        <div
+          className="m-5 flex justify-center items-center text-white text-center h-min rounded-3xl  w-[60%]  sm:w-[40%] md:w-[25%]"
           key={index}
         >
           <img
-            className="rounded-t-3xl w-[100%]"
+            className="rounded-3xl h-40 w-[100%]"
             src={country.flags.png}
             alt={country.translations.fra.common}
           />
-          <h2 className="font-extrabold text-center text-2xl mb-5">
-            {country.translations.fra.common}{" "}
-          </h2>
-          <div className="flex flex-col items-center">
-            <p>
-              Capitale :{" "}
-              <span className="font-extrabold">{country.capital}</span>
-            </p>
-            <p>
-              Region : <span className="font-extrabold">{country.region}</span>
-            </p>
-            <p>
-              Population :{" "}
-              <span className="font-extrabold">
-                {new Intl.NumberFormat(["ban", "id"]).format(
-                  country.population
-                )}
-              </span>
-            </p>
-          </div>
-        </li>
+          <Cards
+            className="absolute opacity-0 hover:opacity-80 rounded-3xl p-5 hover:bg-gray-900  "
+            key={index}
+            country={country}
+          />
+        </div>
       ))}
     </ul>
   );
