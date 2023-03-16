@@ -1,9 +1,8 @@
 import React from "react";
 
-const Cards = (props) => {
-  const { country, ...otherPops } = props;
+const Cards = ({ country, ...otherProps }) => {
   return (
-    <div {...otherPops}>
+    <div {...otherProps}>
       <h2 className="font-extrabold text-center text-2xl ">
         {country.translations.fra.common}{" "}
       </h2>

@@ -20,7 +20,7 @@ const Countries = () => {
           <img
             className="rounded-3xl h-40 w-[100%]"
             src={country.flags.png}
-            alt={country.translations.fra.common}
+            alt={" drapeau : " + country.translations.fra.common}
           />
           <Cards
             className="absolute opacity-0 hover:opacity-80 rounded-3xl p-5 hover:bg-gray-900  "
