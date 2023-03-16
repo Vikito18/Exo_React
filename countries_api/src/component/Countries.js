@@ -11,10 +11,16 @@ const Countries = () => {
   }, []);
 
   return (
-    <ul className="flex flex-wrap">
+    <ul className="flex flex-wrap justify-around">
       {countries.map((country, index) => (
-        <li className="m-5 bg-gray-900 text-white rounded-xl" key={index}>
-          {country.translations.fra.common}
+        <li
+          className="m-5 bg-gray-900 text-white rounded-xl flex-flex-col"
+          key={index}
+        >
+          <img src={country.flags.png} />
+          <h2 className="font-extrabold text-center text-lg">
+            {country.translations.fra.common}{" "}
+          </h2>
         </li>
       ))}
     </ul>
