@@ -1,5 +1,4 @@
 import React from "react";
-import Range from "./Range";
 
 const Table = () => {
   return (
@@ -11,7 +10,6 @@ const Table = () => {
         <li className="hover:bg-gray-500 w-[100%] rounded-full ">Asie</li>
         <li className="hover:bg-gray-500 w-[100%] rounded-full ">Océanie</li>
       </div>
-      <Range />
     </ul>
   );
 };
