@@ -1,4 +1,5 @@
 import React from "react";
+import Range from "./Range";
 
 const Table = () => {
   return (
@@ -10,9 +11,7 @@ const Table = () => {
         <li className="hover:bg-gray-500 w-[100%] rounded-full ">Asie</li>
         <li className="hover:bg-gray-500 w-[100%] rounded-full ">Océanie</li>
       </div>
-      <div className="flex justify-center pt-5">
-        <input className="w-[50%] flex" type="range" min="1" max="250"></input>
-      </div>
+      <Range />
     </ul>
   );
 };
