@@ -1,6 +1,5 @@
 import React from "react";
 import Countries from "./component/Countries";
-import Table from "./component/Table";
 
 const App = () => {
   return (

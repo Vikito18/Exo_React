@@ -26,12 +26,15 @@ const Countries = () => {
     <div className="w-[100%] flex flex-col items-center">
       <ul className="text-white text-xs sm:text-base flex flex-row text-center justify-around w-[95%] bg-gray-800 rounded-full p-2">
         {regions.map((region) => (
-          <li
-            className="hover:bg-gray-500 w-[100%] rounded-full"
-            id={region}
-            onChange={handleRegion}
-          >
-            {region}
+          <li className="flex flex-row gap-5">
+            <input
+              type="radio"
+              className="hover:bg-gray-500 w-[100%] rounded-full"
+              id={region}
+              onChange={handleRegion}
+              name="regionRadio"
+            />
+            <label htmlFor={region}>{region}</label>
           </li>
         ))}
       </ul>
@@ -46,23 +49,26 @@ const Countries = () => {
         ></input>
       </div>
       <ul className="flex flex-wrap justify-around items-center">
-        {countries.slice(0, rangeValue).map((country, index) => (
-          <div
-            className="m-5 flex justify-center items-center text-white text-center  rounded-3xl  "
-            key={index}
-          >
-            <img
-              className="rounded-3xl h-40"
-              src={country.flags.png}
-              alt={" drapeau : " + country.translations.fra.common}
-            />
-            <Cards
-              className="absolute opacity-0 hover:opacity-80 rounded-3xl p-5 hover:bg-gray-900  "
+        {countries
+          .filter((country) => country.region.includes(selectRegion))
+          .slice(0, rangeValue)
+          .map((country, index) => (
+            <div
+              className="m-5 flex justify-center items-center text-white text-center  rounded-3xl  "
               key={index}
-              country={country}
-            />
-          </div>
-        ))}
+            >
+              <img
+                className="rounded-3xl h-40"
+                src={country.flags.png}
+                alt={" drapeau : " + country.translations.fra.common}
+              />
+              <Cards
+                className="absolute opacity-0 hover:opacity-80 rounded-3xl p-5 hover:bg-gray-900  "
+                key={index}
+                country={country}
+              />
+            </div>
+          ))}
       </ul>
     </div>
   );
