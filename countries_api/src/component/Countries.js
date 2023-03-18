@@ -5,8 +5,10 @@ import Cards from "./Cards";
 const Countries = () => {
   const [countries, setCountries] = useState([]);
   const [rangeValue, setRangeValue] = useState(250);
-  const [selectRegion, setSelectRegion] = useState("");
+  const [selectRegion, setSelectRegion] = useState("all");
+  const [selectTri, setSelectTri] = useState("");
   const regions = ["all", "Europe", "Africa", "America", "Asia", "Oceania"];
+  const tri = ["A-Z", "population"];
 
   const onChange = (e) => {
     setRangeValue(e.target.value);
@@ -16,6 +18,10 @@ const Countries = () => {
     setSelectRegion(e.target.id);
   };
 
+  const handleTri = () => {
+    setSelectTri();
+  };
+
   useEffect(() => {
     axios.get("https://restcountries.com/v3.1/all").then((res) => {
       setCountries(res.data);
@@ -23,7 +29,7 @@ const Countries = () => {
   }, []);
 
   return (
-    <div className="w-[100%] flex flex-col items-center">
+    <div className="w-[100%] flex flex-col items-center gap-5">
       <ul className="text-white text-xs sm:text-base flex flex-row text-center justify-around w-[95%] bg-gray-800 rounded-full p-2">
         {regions.map((region) => (
           <li className="flex flex-col sm:flex-row sm:gap-5">
@@ -38,7 +44,7 @@ const Countries = () => {
           </li>
         ))}
       </ul>
-      <div className="flex justify-center pt-5 w-[80%]">
+      <div className="flex flex-col items-center sm:flex-row sm:justify-around p-5 w-[90%] bg-gray-800 rounded-full text-white ">
         <input
           className="w-[50%] flex"
           type="range"
@@ -47,6 +53,25 @@ const Countries = () => {
           defaultValue={rangeValue}
           onChange={onChange}
         ></input>
+
+        <div className="flex flex-row w-[100%] justify-around">
+          {tri.map((sort) => (
+            <li className="flex justify-around flex-row gap-5">
+              <input
+                type="radio"
+                id={sort}
+                onChange={handleTri}
+                name="triRadio"
+              />
+              <label
+                className="lex flex-row self-center text-center w-[100%]"
+                htmlFor={sort}
+              >
+                {sort}
+              </label>
+            </li>
+          ))}
+        </div>
       </div>
       <ul className="flex flex-wrap justify-around items-center">
         {countries
