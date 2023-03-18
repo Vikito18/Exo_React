@@ -26,7 +26,7 @@ const Countries = () => {
     <div className="w-[100%] flex flex-col items-center">
       <ul className="text-white text-xs sm:text-base flex flex-row text-center justify-around w-[95%] bg-gray-800 rounded-full p-2">
         {regions.map((region) => (
-          <li className="flex flex-row gap-5">
+          <li className="flex flex-col sm:flex-row sm:gap-5">
             <input
               type="radio"
               className="hover:bg-gray-500 w-[100%] rounded-full"
@@ -50,7 +50,11 @@ const Countries = () => {
       </div>
       <ul className="flex flex-wrap justify-around items-center">
         {countries
-          .filter((country) => country.region.includes(selectRegion))
+          .filter((country) =>
+            selectRegion === "all"
+              ? country.region
+              : country.region.includes(selectRegion)
+          )
           .slice(0, rangeValue)
           .map((country, index) => (
             <div
