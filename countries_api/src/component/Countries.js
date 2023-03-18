@@ -8,7 +8,7 @@ const Countries = () => {
   const [selectRegion, setSelectRegion] = useState("all");
   const [selectTri, setSelectTri] = useState("");
   const regions = ["all", "Europe", "Africa", "America", "Asia", "Oceania"];
-  const tri = ["A-Z", "population"];
+  const tri = ["default", "A-Z", "population"];
 
   const onChange = (e) => {
     setRangeValue(e.target.value);
@@ -18,8 +18,8 @@ const Countries = () => {
     setSelectRegion(e.target.id);
   };
 
-  const handleTri = () => {
-    setSelectTri();
+  const handleTri = (e) => {
+    setSelectTri(e.target.id);
   };
 
   useEffect(() => {
@@ -54,9 +54,9 @@ const Countries = () => {
           onChange={onChange}
         ></input>
 
-        <div className="flex flex-row w-[100%] justify-around">
+        <div className="flex flex-row w-[100%] justify-around text-xs sm:text-base">
           {tri.map((sort) => (
-            <li className="flex justify-around flex-row gap-5">
+            <li className="flex justify-around flex-row gap-2">
               <input
                 type="radio"
                 id={sort}
@@ -81,13 +81,24 @@ const Countries = () => {
               : country.region.includes(selectRegion)
           )
           .slice(0, rangeValue)
+          .sort((a, b) => {
+            if (selectTri === "A-Z") {
+              return a.translations.fra.common.localeCompare(
+                b.translations.fra.common
+              );
+            } else if (selectTri === "population") {
+              return b.population - a.population;
+            } else {
+              return null;
+            }
+          })
           .map((country, index) => (
             <div
               className="m-5 flex justify-center items-center text-white text-center  rounded-3xl  "
               key={index}
             >
               <img
-                className="rounded-3xl h-40"
+                className="rounded-3xl h-20"
                 src={country.flags.png}
                 alt={" drapeau : " + country.translations.fra.common}
               />
