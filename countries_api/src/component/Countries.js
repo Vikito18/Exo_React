@@ -5,8 +5,15 @@ import Cards from "./Cards";
 const Countries = () => {
   const [countries, setCountries] = useState([]);
   const [rangeValue, setRangeValue] = useState(250);
+  const [selectRegion, setSelectRegion] = useState("");
+  const regions = ["all", "Europe", "Africa", "America", "Asia", "Oceania"];
+
   const onChange = (e) => {
     setRangeValue(e.target.value);
+  };
+
+  const handleRegion = (e) => {
+    setSelectRegion(e.target.id);
   };
 
   useEffect(() => {
@@ -17,6 +24,17 @@ const Countries = () => {
 
   return (
     <div className="w-[100%] flex flex-col items-center">
+      <ul className="text-white text-xs sm:text-base flex flex-row text-center justify-around w-[95%] bg-gray-800 rounded-full p-2">
+        {regions.map((region) => (
+          <li
+            className="hover:bg-gray-500 w-[100%] rounded-full"
+            id={region}
+            onChange={handleRegion}
+          >
+            {region}
+          </li>
+        ))}
+      </ul>
       <div className="flex justify-center pt-5 w-[80%]">
         <input
           className="w-[50%] flex"

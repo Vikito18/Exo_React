@@ -8,7 +8,6 @@ const App = () => {
       <h1 className="text-2xl sm:text-3xl font-extrabold p-10 text-center w-[100%]">
         Country Single Page
       </h1>
-      <Table />
       <Countries />
     </div>
   );
