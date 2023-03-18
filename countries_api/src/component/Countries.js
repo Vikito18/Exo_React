@@ -80,7 +80,6 @@ const Countries = () => {
               ? country.region
               : country.region.includes(selectRegion)
           )
-          .slice(0, rangeValue)
           .sort((a, b) => {
             if (selectTri === "A-Z") {
               return a.translations.fra.common.localeCompare(
@@ -92,6 +91,7 @@ const Countries = () => {
               return null;
             }
           })
+          .slice(0, rangeValue)
           .map((country, index) => (
             <div
               className="m-5 flex justify-center items-center text-white text-center  rounded-3xl  "
