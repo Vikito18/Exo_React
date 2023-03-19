@@ -9,11 +9,11 @@ const Form = () => {
         placeholder="nom"
       />
       <textarea
-        className="border-cyan-400 border-2 rounded-xl p-1 w-[80%] "
+        className="border-cyan-400 border-2 rounded-xl p-1 w-[80%] h-40"
         placeholder="Message"
       />
       <input
-        className="bg-cyan-400 rounded-xl w-40 p-2"
+        className="bg-cyan-400 rounded-xl w-40 p-1"
         type="submit"
         value="Envoyer"
       />
