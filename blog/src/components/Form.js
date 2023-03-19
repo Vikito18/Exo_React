@@ -15,7 +15,7 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col items-center gap-5 w-[90%] "
+      className="flex flex-col items-center gap-3 w-[90%] "
     >
       <input
         className="border-cyan-400 border rounded-lg p-1 w-[40%] "
