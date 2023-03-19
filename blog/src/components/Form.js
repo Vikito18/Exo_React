@@ -24,7 +24,11 @@ const Form = () => {
       />
       <textarea
         onChange={handleTextContent}
-        className="border-cyan-400 border rounded-lg p-1 w-[80%] h-40"
+        className={
+          !error
+            ? "border-cyan-400  border rounded-lg p-1 w-[80%] h-40"
+            : "border-red-700 border rounded-lg p-1 w-[80%] h-40"
+        }
         placeholder="Message"
       />
       {error && (
