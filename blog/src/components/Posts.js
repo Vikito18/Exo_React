@@ -15,10 +15,10 @@ const Posts = () => {
   return (
     <ul className="flex flex-col gap-5 w-[80%] ">
       {posts.map((post) => (
-        <div key={post.id} className="bg-white p-5 ">
-          <h2>{post.author}</h2>
+        <div key={post.id} className="bg-white p-5 shadow-lg mb-5 rounded-lg ">
+          <h2 className="font-extrabold mb-3">{post.author}</h2>
           <p>{post.content}</p>
-          <p>{post.date}</p>
+          <p className="flex justify-end mt-5">{post.date}</p>
         </div>
       ))}
     </ul>
