@@ -1,12 +1,27 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const Form = () => {
   const [textContent, setTextContent] = useState("");
+  const [author, setAuthor] = useState("");
   const [error, setError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    textContent.length < 140 ? setError(true) : setError(false);
+    if (textContent.length < 140) {
+      setError(true);
+    } else {
+      setError(false);
+      axios.post("http://localhost:3004/articles", {
+        author,
+        content: textContent,
+        date: Date.now(),
+      });
+    }
+  };
+
+  const handleAuthor = (e) => {
+    setAuthor(e.target.value);
   };
 
   const handleTextContent = (e) => {
@@ -21,9 +36,12 @@ const Form = () => {
         className="border-cyan-400 border rounded-lg p-1 w-[40%] "
         type="text"
         placeholder="nom"
+        onChange={handleAuthor}
+        value={author}
       />
       <textarea
         onChange={handleTextContent}
+        value={textContent}
         className={
           !error
             ? "border-cyan-400  border rounded-lg p-1 w-[80%] h-40"

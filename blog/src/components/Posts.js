@@ -32,10 +32,12 @@ const Posts = () => {
           <p>{post.content}</p>
           <p className="flex justify-end mt-5">{dateFormat(post.date)}</p>
           <div className="flex flex-row gap-5 text-xs">
-            <butoo className="bg-gray-200 border border-black p-2">Edit</butoo>
-            <butoo className="bg-gray-200 border border-black p-2">
+            <button className="bg-gray-200 border border-black p-2">
+              Edit
+            </button>
+            <button className="bg-gray-200 border border-black p-2">
               Supprimmer
-            </butoo>
+            </button>
           </div>
         </div>
       ))}
