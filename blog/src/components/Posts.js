@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 
-const Posts = () => {
-  const [posts, setPosts] = useState([]);
-
+const Posts = ({ article, ...otherProps }) => {
   const dateFormat = (date) => {
     const newDate = new Date(date).toLocaleDateString("fr-FR", {
       year: "numeric",
@@ -16,32 +13,24 @@ const Posts = () => {
     return newDate;
   };
 
-  const getData = () => {
-    axios
-      .get("http://localhost:3004/articles")
-      .then((res) => setPosts(res.data));
-  };
-
-  useEffect(() => getData(), []);
-
   return (
-    <ul className="flex flex-col gap-5 w-[80%] ">
-      {posts.map((post) => (
-        <div key={post.id} className="bg-white p-5 shadow-lg mb-5 rounded-lg ">
-          <h2 className="font-extrabold mb-3">{post.author}</h2>
-          <p>{post.content}</p>
-          <p className="flex justify-end mt-5">{dateFormat(post.date)}</p>
-          <div className="flex flex-row gap-5 text-xs">
-            <button className="bg-gray-200 border border-black p-2">
-              Edit
-            </button>
-            <button className="bg-gray-200 border border-black p-2">
-              Supprimmer
-            </button>
-          </div>
-        </div>
-      ))}
-    </ul>
+    <div className="bg-white p-5 shadow-lg  rounded-lg " {...otherProps}>
+      <h2 className="font-extrabold mb-3" {...otherProps}>
+        {article.author}
+      </h2>
+      <p>{article.content}</p>
+      <p className="flex justify-end mt-5" {...otherProps}>
+        {dateFormat(article.date)}
+      </p>
+      <div className="flex flex-row gap-5 text-xs" {...otherProps}>
+        <button className="bg-gray-200 border border-black p-2" {...otherProps}>
+          Edit
+        </button>
+        <button className="bg-gray-200 border border-black p-2" {...otherProps}>
+          Supprimmer
+        </button>
+      </div>
+    </div>
   );
 };
 
