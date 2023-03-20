@@ -31,6 +31,12 @@ const Posts = () => {
           <h2 className="font-extrabold mb-3">{post.author}</h2>
           <p>{post.content}</p>
           <p className="flex justify-end mt-5">{dateFormat(post.date)}</p>
+          <div className="flex flex-row gap-5 text-xs">
+            <butoo className="bg-gray-200 border border-black p-2">Edit</butoo>
+            <butoo className="bg-gray-200 border border-black p-2">
+              Supprimmer
+            </butoo>
+          </div>
         </div>
       ))}
     </ul>
