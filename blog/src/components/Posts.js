@@ -37,6 +37,12 @@ const Posts = ({ article, ...otherProps }) => {
     setUpdateContent(e.target.value);
   };
 
+  const handleDelete = () => {
+    axios
+      .delete(`http://localhost:3004/articles/${article.id}`)
+      .then((data) => data.remove());
+  };
+
   return (
     <div className="bg-white p-5 shadow-lg  rounded-lg " {...otherProps}>
       <h2 className="font-extrabold mb-3">{article.author}</h2>
@@ -59,7 +65,10 @@ const Posts = ({ article, ...otherProps }) => {
         >
           {isEdit ? "Valider" : "Edit"}
         </button>
-        <button className="bg-gray-200 border border-black p-2">
+        <button
+          onClick={handleDelete}
+          className="bg-gray-200 border border-black p-2"
+        >
           Supprimmer
         </button>
       </div>
