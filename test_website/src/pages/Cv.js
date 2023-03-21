@@ -16,7 +16,7 @@ const Cv = () => {
         <div className="flex flex-row items-center pb-5 justify-around sm:justify-around w-[100%]">
           <img
             src={profile}
-            alt="potho_profile"
+            alt="photo_profile"
             className="w-[15%] rounded-full"
           />
           <h1 className="flex self-center justify-self-center">

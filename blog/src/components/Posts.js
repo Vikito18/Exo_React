@@ -1,6 +1,11 @@
 import React from "react";
+import axios from "axios";
 
 const Posts = ({ article, ...otherProps }) => {
+  const handleDelete = (e) => {
+    axios.delete("http://localhost:3004/articles", {});
+  };
+
   const dateFormat = (date) => {
     const newDate = new Date(date).toLocaleDateString("fr-FR", {
       year: "numeric",
@@ -26,7 +31,11 @@ const Posts = ({ article, ...otherProps }) => {
         <button className="bg-gray-200 border border-black p-2" {...otherProps}>
           Edit
         </button>
-        <button className="bg-gray-200 border border-black p-2" {...otherProps}>
+        <button
+          onClick={handleDelete}
+          className="bg-gray-200 border border-black p-2"
+          {...otherProps}
+        >
           Supprimmer
         </button>
       </div>
