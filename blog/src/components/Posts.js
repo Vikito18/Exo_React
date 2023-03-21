@@ -47,7 +47,7 @@ const Posts = ({ article, ...otherProps }) => {
           className="border border-black w-[100%] h-40"
         ></textarea>
       ) : (
-        <p>{article.content}</p>
+        <p>{updateContent ? updateContent : article.content}</p>
       )}
       <p className="flex justify-end mt-5" {...otherProps}>
         {dateFormat(article.date)}
