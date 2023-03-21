@@ -3,6 +3,7 @@ import axios from "axios";
 
 const Posts = ({ article, ...otherProps }) => {
   const [isEdit, setIsEdit] = useState(false);
+  const [isDelete, setIsDelete] = useState(false);
   const [updateContent, setUpdateContent] = useState("");
 
   const dateFormat = (date) => {
@@ -40,10 +41,10 @@ const Posts = ({ article, ...otherProps }) => {
   const handleDelete = () => {
     axios
       .delete(`http://localhost:3004/articles/${article.id}`)
-      .then((data) => data.remove());
+      .then((data) => setIsDelete(true));
   };
 
-  return (
+  return !isDelete ? (
     <div className="bg-white p-5 shadow-lg  rounded-lg " {...otherProps}>
       <h2 className="font-extrabold mb-3">{article.author}</h2>
       {isEdit ? (
@@ -73,7 +74,7 @@ const Posts = ({ article, ...otherProps }) => {
         </button>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Posts;
