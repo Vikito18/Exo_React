@@ -50,7 +50,8 @@ const Posts = ({ article, ...otherProps }) => {
       {isEdit ? (
         <textarea
           onChange={handleUpdateContent}
-          defaultValue={article.content}
+          autoFocus
+          defaultValue={updateContent ? updateContent : article.content}
           className="border border-black w-[100%] h-40"
         ></textarea>
       ) : (
