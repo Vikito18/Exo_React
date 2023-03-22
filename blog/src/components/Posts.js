@@ -45,7 +45,13 @@ const Posts = ({ article, ...otherProps }) => {
   };
 
   return !isDelete ? (
-    <div className="bg-white p-5 shadow-lg  rounded-lg " {...otherProps}>
+    <div
+      className={
+        isEdit
+          ? "bg-cyan-100 p-5 shadow-lg  rounded-lg "
+          : "bg-white p-5 shadow-lg  rounded-lg "
+      }
+    >
       <h2 className="font-extrabold mb-3">{article.author}</h2>
       {isEdit ? (
         <textarea
