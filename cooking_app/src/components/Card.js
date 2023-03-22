@@ -1,30 +1,15 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 
-const Card = () => {
-  const [recipes, setRecipes] = useState([]);
-
-  const getData = () => {
-    axios
-      .get("https://www.themealdb.com/api/json/v1/1/search.php?s=")
-      .then((res) => setRecipes(res.data.meals));
-  };
-
-  useEffect(() => getData());
+const Card = ({ props }) => {
   return (
-    <div className="flex flex-wrap justify-around ">
-      {recipes.map((recipe) => (
-        <div
-          key={recipe.idMeal}
-          className="w-80 p-5 flex flex-col items-center"
-        >
-          <img
-            src={recipe.strMealThumb}
-            alt={"photo : " + recipe.strMealThumb}
-          />
-          <h2 className="font-extrabold text-2xl">{recipe.strMeal}</h2>
-        </div>
-      ))}
+    <div className="w-80 m-5 flex flex-col items-center bg-white rounded-2xl">
+      <img
+        className="rounded-t-2xl"
+        src={props.strMealThumb}
+        alt={"photo : " + props.strMealThumb}
+      />
+      <h2 className="font-extrabold text-2xl">{props.strMeal}</h2>
+      <p className="text-center p-3">{props.strInstructions}</p>
     </div>
   );
 };
