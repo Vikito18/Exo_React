@@ -29,6 +29,7 @@ const Form = () => {
       setAuthor("");
       setTextContent("");
       getData();
+      window.location.reload();
     }
   };
 

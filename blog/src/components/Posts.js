@@ -39,9 +39,12 @@ const Posts = ({ article, ...otherProps }) => {
   };
 
   const handleDelete = () => {
-    axios
-      .delete(`http://localhost:3004/articles/${article.id}`)
-      .then((data) => setIsDelete(true));
+    if (window.confirm("Supprimer cet article ?")) {
+      axios
+        .delete(`http://localhost:3004/articles/${article.id}`)
+        .then(() => setIsDelete(true))
+        .then(() => window.location.reload());
+    }
   };
 
   return !isDelete ? (
