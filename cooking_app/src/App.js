@@ -32,12 +32,12 @@ const App = () => {
           onChange={handleInput}
           type="text"
           placeholder="ex : beef"
-          className="rounded-xl p-2"
+          className="rounded-xl p-2 shadow-md "
         />
         <input
           onClick={handleClick}
           type="submit"
-          className="bg-cyan-400 rounded-xl p-2"
+          className="bg-cyan-400 rounded-xl p-2 shadow-md "
         />
       </form>
       <div className="flex flex-wrap justify-around ">
