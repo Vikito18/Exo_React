@@ -6,40 +6,27 @@ const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
-  const getData = (v) => {
+  useEffect(() => {
     axios
-      .get(`https://www.themealdb.com/api/json/v1/1/search.php?s=` + v)
+      .get(`https://www.themealdb.com/api/json/v1/1/search.php?s=` + inputValue)
       .then((res) => setRecipes(res.data.meals));
-  };
+  }, [inputValue]);
 
   const handleInput = (e) => {
     setInputValue(e.target.value);
   };
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    getData(inputValue);
-  };
-
-  useEffect(() => getData(""));
-
-  return (
+  return inputValue == null ? (
+    <span> Aucun resultat</span>
+  ) : (
     <div className="flex flex-col items-center bg-blue-100">
       <h1 className="font-extrabold text-4xl p-10">Cooking App</h1>
-
-      <form className="flex flex-row gap-5">
-        <input
-          onChange={handleInput}
-          type="text"
-          placeholder="ex : beef"
-          className="rounded-xl p-2 shadow-md "
-        />
-        <input
-          onClick={handleClick}
-          type="submit"
-          className="bg-cyan-400 rounded-xl p-2 shadow-md "
-        />
-      </form>
+      <input
+        onChange={handleInput}
+        type="text"
+        placeholder="ex : beef"
+        className="rounded-xl p-2 shadow-md "
+      />
       <div className="flex flex-wrap justify-around ">
         {recipes.map((recipe) => (
           <Card key={recipe.idMeal} props={recipe} />
