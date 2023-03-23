@@ -9,7 +9,7 @@ const Card = ({ props }) => {
         src={props.strMealThumb}
         alt={"photo : " + props.strMealThumb}
       />
-      <h2 className="font-extrabold text-2xl">{props.strMeal}</h2>
+      <h2 className="font-extrabold text-2xl text-center">{props.strMeal}</h2>
       <ClampLines
         line={10}
         text={props.strInstructions}
