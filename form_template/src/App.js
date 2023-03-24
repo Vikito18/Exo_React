@@ -1,7 +1,12 @@
 import React from "react";
+import FormEmail from "./componenets/FormEmail";
 
 const App = () => {
-  return <div></div>;
+  return (
+    <div>
+      <FormEmail />
+    </div>
+  );
 };
 
 export default App;
