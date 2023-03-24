@@ -18,9 +18,9 @@ const Nav = () => {
       </NavLink>
       <NavLink
         className="bg-gray-800 flex items-center justify-center p-10 rounded-xl border-gray-500 border-solid border-2 h-[50%] w-[30%] hover:bg-gray-400 hover:text-black"
-        to="/"
+        to="/contact"
       >
-        <li>Profile</li>
+        <li>Contact</li>
       </NavLink>
     </ul>
   );
