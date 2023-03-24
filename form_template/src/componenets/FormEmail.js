@@ -9,12 +9,12 @@ const FormEmail = () => {
 
     emailjs
       .sendForm(
-        // "YOUR_SERVICE_ID",
+        // YOUR_SERVICE_ID
         "service_zjb84iq",
-        // "YOUR_TEMPLATE_ID",
+        // YOUR_TEMPLATE_ID
         "template_3xah6aj",
         form.current,
-        // "YOUR_PUBLIC_KEY"
+        // YOUR_PUBLIC_KEY
         "qwD7sftjvdw2nKral"
       )
       .then(
