@@ -59,7 +59,7 @@ const Contact = () => {
           <textarea
             name="message"
             required
-            className="border border-cyan-400 rounded-lg mb-5 w-[80%] h-72 flex justify-center"
+            className="border border-cyan-400 rounded-lg mb-5 w-[80%] h-72 flex justify-center text-black"
           />
           <input
             type="submit"
