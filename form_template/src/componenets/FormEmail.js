@@ -31,16 +31,40 @@ const FormEmail = () => {
   };
 
   return (
-    <div>
-      <h1>Email Form</h1>
-      <form ref={form} onSubmit={sendEmail}>
+    <div className="flex flex-col items-center gap-5">
+      <h1 className="font-extrabold text-xl">Email Form</h1>
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="flex flex-col items-center w-[100%]"
+      >
         <label>Name</label>
-        <input type="text" name="name" required autoComplete="off" />
+        <input
+          type="text"
+          name="name"
+          autoComplete="off"
+          required
+          className="border border-cyan-400 rounded-lg mb-5 "
+        />
         <label>Email</label>
-        <input type="email" name="email" required autoComplete="off" />
+        <input
+          type="email"
+          name="email"
+          autoComplete="off"
+          required
+          className="border border-cyan-400 rounded-lg mb-5 "
+        />
         <label>Message</label>
-        <textarea name="message" required />
-        <input type="submit" value="Envoyer" />
+        <textarea
+          name="message"
+          required
+          className="border border-cyan-400 rounded-lg mb-5 w-[80%] h-72 flex justify-center"
+        />
+        <input
+          type="submit"
+          value="Envoyer"
+          className="bg-cyan-400 p-3 rounded-xl"
+        />
       </form>
     </div>
   );
