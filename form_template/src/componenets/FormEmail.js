@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const FormEmail = () => {
   const form = useRef();
@@ -20,6 +21,8 @@ const FormEmail = () => {
       .then(
         (result) => {
           console.log(result.text);
+          form.current.reset();
+          Swal.fire("Cofirmation!", "Message envoyé ", "success");
         },
         (error) => {
           console.log(error.text);
