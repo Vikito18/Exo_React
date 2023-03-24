@@ -11,21 +11,20 @@ const FormEmail = () => {
     emailjs
       .sendForm(
         // YOUR_SERVICE_ID
-        "service_zjb84iq",
+        process.env.REACT_APP_SERVICE_ID,
         // YOUR_TEMPLATE_ID
-        "template_3xah6aj",
+        process.env.REACT_APP_TEMPLATE_ID,
         form.current,
         // YOUR_PUBLIC_KEY
-        "qwD7sftjvdw2nKral"
+        process.env.REACT_APP_PUBLIC_KEY
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
           form.current.reset();
           Swal.fire("Cofirmation!", "Message envoyé ", "success");
         },
-        (error) => {
-          console.log(error.text);
+        () => {
+          Swal.fire("Erreur !", "Un problème est survenu !", "warming");
         }
       );
   };
