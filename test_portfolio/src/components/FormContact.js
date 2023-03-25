@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 
 const FormContact = () => {
@@ -40,7 +40,7 @@ const FormContact = () => {
         name="name"
         autoComplete="off"
         required
-        className="border border-cyan-400 rounded-lg mb-5 text-black"
+        className="border border-cyan-400 rounded-lg mb-5 text-black bg-gray-200"
       />
       <label>Email</label>
       <input
@@ -48,13 +48,13 @@ const FormContact = () => {
         name="email"
         autoComplete="off"
         required
-        className="border border-cyan-400 rounded-lg mb-5 text-black"
+        className="border border-cyan-400 rounded-lg mb-5 text-black bg-gray-200"
       />
       <label>Message</label>
       <textarea
         name="message"
         required
-        className="border border-cyan-400 rounded-lg mb-5 w-[80%] h-72 flex justify-center text-black"
+        className="border border-cyan-400 rounded-lg mb-5 w-[80%] h-72 flex justify-center text-black bg-gray-200"
       />
       <input
         type="submit"
