@@ -21,10 +21,10 @@ const FormEmail = () => {
       .then(
         () => {
           form.current.reset();
-          Swal.fire("Cofirmation!", "Message envoyé ", "success");
+          Swal.fire("Confirmation!", "Message envoyé ", "success");
         },
         () => {
-          Swal.fire("Erreur !", "Un problème est survenu !", "warming");
+          Swal.fire("Erreur !", "Un problème est survenu !", "warning");
         }
       );
   };
@@ -43,7 +43,7 @@ const FormEmail = () => {
           name="name"
           autoComplete="off"
           required
-          className="border border-cyan-400 rounded-lg mb-5 "
+          className="border border-cyan-400 rounded-lg mb-5 w-72"
         />
         <label>Email</label>
         <input
@@ -51,7 +51,7 @@ const FormEmail = () => {
           name="email"
           autoComplete="off"
           required
-          className="border border-cyan-400 rounded-lg mb-5 "
+          className="border border-cyan-400 rounded-lg mb-5 w-72"
         />
         <label>Message</label>
         <textarea
