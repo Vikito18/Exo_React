@@ -1,17 +1,33 @@
+import { useState } from "react";
 import Nav from "./Nav";
-import { Menu } from "@headlessui/react";
-import { NavLink } from "react-router-dom";
 
 export const PageHeader = (props) => {
   const { title } = props;
+  const [isHover, setIsHover] = useState(false);
+
+  const handleIsHover = () => {
+    isHover ? setIsHover(false) : setIsHover(true);
+  };
+
   return (
     <div className="flex-col flex items-center sm:items-center bg-gray-900">
       <h1 className="flex text-xxl text-cyan-500 font-extrabold"> {title}</h1>
-      <ul className="flex-row pb-10 items-center items-around  sm:flex-row flex justify-around sm:w-[100%] mt-10  w-[80%]">
+      <ul className="flex-row items-center items-around  sm:flex-row flex justify-around sm:w-[100%] mt-10  w-[80%]">
         <Nav path="/" title="Home" />
         <Nav path="/Cv" title="Mon CV" />
         <Nav path="/Contact" title="Contact" />
-        <Nav path="/" title="Portfolio" />
+        <Nav onClick={handleIsHover} path="" title="Portfolio" />
+      </ul>
+      <ul
+        className={
+          isHover === false
+            ? "opacity-0 lex-row mb-5 items-end items-around  sm:flex-row flex justify-around sm:w-[100%] w-[80%]"
+            : "flex-row mb-5 items-around  sm:flex-row flex justify-around sm:w-[100%] w-[80%]"
+        }
+      >
+        <Nav path="/" title="Projet 1" />
+        <Nav path="/Cv" title="Projet 2" />
+        <Nav path="/Contact" title="Projet 3" />
       </ul>
     </div>
   );
