@@ -1,10 +1,12 @@
 import React from "react";
+import Mouse from "../components/Mouse";
 import Page from "../components/Page";
 import profile from "../img/profile.png";
 
 const Home = () => {
   return (
     <Page title="Welcome">
+      <Mouse />
       <div className="flex flex-col sm:flex-row gap-20 justify-around items-center w-[100%]">
         <img
           src={profile}

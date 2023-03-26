@@ -21,7 +21,7 @@ export const PageHeader = (props) => {
       <ul
         className={
           isHover === false
-            ? "opacity-0 lex-row mb-5 items-end items-around  sm:flex-row flex justify-around sm:w-[100%] w-[80%]"
+            ? "invisible lex-row mb-5 items-end items-around  sm:flex-row flex justify-around sm:w-[100%] w-[80%]"
             : "flex-row mb-5 items-around  sm:flex-row flex justify-around sm:w-[100%] w-[80%]"
         }
       >
