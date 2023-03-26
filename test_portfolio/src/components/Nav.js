@@ -5,7 +5,7 @@ const Nav = ({ path, title, children, ...otherProps }) => {
   return (
     <NavLink
       to={path}
-      className="bg-gray-800 flex items-center justify-center p-10 rounded-xl border-cyan-500 border-solid border-2 h-[50%] w-[30%] hover:bg-cyan-500 hover:text-black z-10"
+      className="bg-gray-800 flex items-center justify-center p-10 rounded-xl border-cyan-500 border-solid border-2 h-[50%] w-[30%] hover:bg-cyan-500 hover:text-black"
       {...otherProps}
     >
       <li>{title}</li>

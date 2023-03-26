@@ -12,7 +12,7 @@ const Mouse = () => {
   return (
     <span
       id="cursor"
-      className="border border-cyan-400 absolute translate-y-[-50%] translate-x-[-50%] rounded-full w-14 h-14"
+      className="z-auto mix-blend-difference border-8 border-orange-400 absolute translate-y-[-50%] translate-x-[-50%] rounded-full w-16 h-16"
     ></span>
   );
 };

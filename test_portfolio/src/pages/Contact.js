@@ -6,7 +6,7 @@ import Page from "../components/Page";
 const Contact = () => {
   return (
     <Page title="Contact">
-      <Mouse />
+      {/* <Mouse /> */}
       <div className="flex flex-col items-center gap-5">
         <h1 className="font-extrabold text-xl">Me contacter</h1>
         <FormContact />

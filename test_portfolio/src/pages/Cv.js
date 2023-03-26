@@ -8,10 +8,12 @@ import bootstrap from "../img/bootstrap.png";
 import tailwind from "../img/tailwind.png";
 import psql from "../img/psql.png";
 import profile from "../img/profile.png";
+import Mouse from "../components/Mouse";
 
 const Cv = () => {
   return (
     <Page title="Mon CV">
+      {/* <Mouse /> */}
       <div className=" flex flex-col self-center justify-center w-[100%] text-lg sm:text-xl lg:text-xxl font-extrabold  ">
         <div className="flex flex-row items-center pb-5 justify-around sm:justify-around w-[100%]">
           <img
