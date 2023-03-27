@@ -18,7 +18,6 @@ const SocialNetwork = () => {
         <FontAwesomeIcon
           className="h-10 w-10 sm:h-16 sm:w-16"
           icon={faFacebook}
-          beat
         />
       </a>
       <a
@@ -29,7 +28,6 @@ const SocialNetwork = () => {
         <FontAwesomeIcon
           className="h-10 w-10 sm:h-16 sm:w-16"
           icon={faLinkedin}
-          beat
         />
       </a>
       <a
@@ -40,7 +38,6 @@ const SocialNetwork = () => {
         <FontAwesomeIcon
           className="h-10 w-10 sm:h-16 sm:w-16"
           icon={faGithub}
-          beat
         />
       </a>
       <a
@@ -49,9 +46,8 @@ const SocialNetwork = () => {
         rel="noopener noreferrer"
       >
         <FontAwesomeIcon
-          className="h-10 w-10 sm:h-16 sm:w-16"
+          className="h-10 w-10 sm:h-16 sm:w-16 "
           icon={faTwitter}
-          beat
         />
       </a>
     </ul>
