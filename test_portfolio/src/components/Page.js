@@ -29,7 +29,7 @@ export const PageHeader = (props) => {
         <Nav path="/" title="Home" />
         <Nav path="/Cv" title="Mon CV" />
         <Nav path="/Contact" title="Contact" />
-        <Nav onClick={handleIsHover} path="" title="Portfolio" />
+        <Nav onClick={handleIsHover} path="/Projects" title="Portfolio" />
       </ul>
     </div>
   );
