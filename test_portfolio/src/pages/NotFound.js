@@ -1,11 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Mouse from "../components/Mouse";
 
 const NotFound = () => {
   return (
     <main className="grid min-h-screen place-items-center bg-gray-900 py-24 px-6 sm:py-32 lg:px-8">
-      {/* <Mouse /> */}
       <div className="text-center">
         <p className="text-base font-semibold text-cyan-400">404</p>
         <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-5xl">

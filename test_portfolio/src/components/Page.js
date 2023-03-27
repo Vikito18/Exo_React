@@ -18,17 +18,6 @@ export const PageHeader = (props) => {
         <Nav path="/Contact" title="Contact" />
         <Nav onClick={handleIsHover} path="" title="Portfolio" />
       </ul>
-      <ul
-        className={
-          isHover === false
-            ? "invisible lex-row mb-5 sm:flex-row flex justify-around sm:w-[100%] w-[80%]"
-            : "flex-row mb-5 items-around  sm:flex-row flex justify-center sm:w-[100%] w-[80%]"
-        }
-      >
-        <Nav path="/" title="Projet 1" />
-        <Nav path="/Cv" title="Projet 2" />
-        <Nav path="/Contact" title="Projet 3" />
-      </ul>
     </div>
   );
 };
