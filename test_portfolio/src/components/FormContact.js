@@ -54,12 +54,12 @@ const FormContact = () => {
       <textarea
         name="message"
         required
-        className="border border-cyan-400 rounded-lg mb-5 w-[80%] h-72 flex justify-center text-black bg-gray-200"
+        className="border border-cyan-400 rounded-lg mb-5 w-[80%] h-64 flex justify-center text-black bg-gray-200"
       />
       <input
         type="submit"
         value="Envoyer"
-        className="bg-cyan-400 p-3 rounded-xl text-black"
+        className="bg-cyan-400 p-3 rounded-xl text-black w-36"
       />
     </form>
   );
