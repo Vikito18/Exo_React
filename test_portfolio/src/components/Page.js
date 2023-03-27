@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Nav from "./Nav";
+import MovingComponent from "react-moving-text";
 
 export const PageHeader = (props) => {
   const { title } = props;
@@ -11,8 +12,20 @@ export const PageHeader = (props) => {
 
   return (
     <div className="flex-col flex items-center sm:items-center bg-gray-900">
-      <h1 className="flex text-xxl text-cyan-500 font-extrabold"> {title}</h1>
-      <ul className="flex-row items-center items-around  sm:flex-row flex justify-around sm:w-[100%] mt-10  w-[80%]">
+      <h1 className="flex text-xxl text-cyan-500 font-extrabold p-5">
+        <MovingComponent
+          type="fadeInFromLeft"
+          duration="1200ms"
+          delay="0s"
+          direction="normal"
+          timing="ease"
+          iteration="1"
+          fillMode="none"
+        >
+          {title}
+        </MovingComponent>
+      </h1>
+      <ul className="flex-row items-center items-around  sm:flex-row flex justify-around sm:w-[100%] w-[80%]">
         <Nav path="/" title="Home" />
         <Nav path="/Cv" title="Mon CV" />
         <Nav path="/Contact" title="Contact" />
