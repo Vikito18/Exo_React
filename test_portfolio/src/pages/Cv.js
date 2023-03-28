@@ -57,11 +57,11 @@ const Cv = () => {
         >
           <ul className=" text-lg flex flex-col text-center items-center w-[95%]">
             <li className="flex pb-8 w-[90%]">
-              Certificat professionnel Développeur et Concepteur d'application
+              Titre professionnel de Développeur et Concepteur d'application
               mobile
             </li>
             <li className="w-[90%]">
-              Cértificat Développeur d'application web /web mobile
+              Titre professionnel de Développeur d'application web /web mobile
             </li>
             <li>Bachelor en Management Marketing événementiel</li>
           </ul>
