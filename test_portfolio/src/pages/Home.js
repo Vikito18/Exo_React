@@ -4,11 +4,10 @@ import SocialNetwork from "../components/SocialNetwork";
 import profile from "../img/profile.png";
 import MovingComponent from "react-moving-text";
 import DynamicText from "../components/DynamicText";
-import ArrowNavigation from "../components/ArrowNavigation";
 
 const Home = () => {
   return (
-    <Page title="Welcome">
+    <Page title="Welcome" right="/Cv">
       <MovingComponent
         type="fadeInFromLeft"
         duration="1200ms"
@@ -18,7 +17,7 @@ const Home = () => {
         iteration="1"
         fillMode="none"
       >
-        <div className="flex flex-col sm:flex-row  justify-around items-center w-[100%]">
+        <div className="flex flex-col sm:flex-row mt-10 justify-around items-center w-[100%]">
           <img
             src={profile}
             alt="potho_profile"
@@ -28,7 +27,6 @@ const Home = () => {
         </div>
       </MovingComponent>
       <SocialNetwork />
-      <ArrowNavigation right={"/Cv"} />
     </Page>
   );
 };

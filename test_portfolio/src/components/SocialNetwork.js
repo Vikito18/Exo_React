@@ -9,7 +9,7 @@ import {
 
 const SocialNetwork = () => {
   return (
-    <ul className="flex flex-row justify-center gap-10 mt-5">
+    <ul className="flex flex-row justify-center justify-self-end gap-10 mt-5">
       <a
         href="https://www.facebook.com/profile.php?id=1000103662ap-597963"
         target="_blank"

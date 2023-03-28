@@ -9,12 +9,11 @@ import tailwind from "../img/tailwind.png";
 import psql from "../img/psql.png";
 import MovingComponent from "react-moving-text";
 import SocialNetwork from "../components/SocialNetwork";
-import ArrowNavigation from "../components/ArrowNavigation";
 
 const Cv = () => {
   return (
-    <Page title="Mon CV">
-      <div className="flex flex-col gap-5 md:flex-row justify-around items-center w-[100%] font-extrabold">
+    <Page title="Mon CV" right="/Contact" left="/">
+      <div className="flex flex-col gap-5 mt-10 mb-10 md:flex-row justify-around items-center w-[100%] font-extrabold">
         <MovingComponent
           className="flex flex-col items-center rounded-3xl bg-gray-200 border-4 border-cyan-500  w-auto "
           type="fadeInFromLeft"
@@ -69,8 +68,6 @@ const Cv = () => {
         </MovingComponent>
       </div>
       <SocialNetwork />
-      <ArrowNavigation right={"/Contact"} />
-      <ArrowNavigation left={"/"} />
     </Page>
   );
 };
