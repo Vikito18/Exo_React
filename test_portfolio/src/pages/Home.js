@@ -4,6 +4,7 @@ import SocialNetwork from "../components/SocialNetwork";
 import profile from "../img/profile.png";
 import MovingComponent from "react-moving-text";
 import DynamicText from "../components/DynamicText";
+import ArrowNavigation from "../components/ArrowNavigation";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
         </div>
       </MovingComponent>
       <SocialNetwork />
+      <ArrowNavigation right={"/Cv"} />
     </Page>
   );
 };

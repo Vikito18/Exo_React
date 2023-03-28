@@ -1,4 +1,5 @@
 import React from "react";
+import ArrowNavigation from "../components/ArrowNavigation";
 import FormContact from "../components/FormContact";
 import Page from "../components/Page";
 
@@ -9,6 +10,8 @@ const Contact = () => {
         <h1 className="font-extrabold text-xl">Me contacter</h1>
         <FormContact />
       </div>
+      <ArrowNavigation right={"/Projects"} />
+      <ArrowNavigation left={"/Cv"} />
     </Page>
   );
 };

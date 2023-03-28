@@ -12,6 +12,7 @@ const DynamicText = () => {
       <span className="flex lg:self-center text-center justify-self-center self-center text-yellow-600">
         <MovingComponent
           type="typewriter"
+          duration="700ms"
           dataText={["JavaScript", "React.js"]}
         />
       </span>

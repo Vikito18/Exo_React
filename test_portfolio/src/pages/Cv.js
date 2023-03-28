@@ -9,6 +9,7 @@ import tailwind from "../img/tailwind.png";
 import psql from "../img/psql.png";
 import MovingComponent from "react-moving-text";
 import SocialNetwork from "../components/SocialNetwork";
+import ArrowNavigation from "../components/ArrowNavigation";
 
 const Cv = () => {
   return (
@@ -68,6 +69,8 @@ const Cv = () => {
         </MovingComponent>
       </div>
       <SocialNetwork />
+      <ArrowNavigation right={"/Contact"} />
+      <ArrowNavigation left={"/"} />
     </Page>
   );
 };
