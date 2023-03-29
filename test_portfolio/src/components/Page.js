@@ -1,15 +1,15 @@
-import { useState } from "react";
-import Nav from "./Nav";
+// import { useState } from "react";
+// import Nav from "./Nav";
 import MovingComponent from "react-moving-text";
 import ArrowNavigation from "./ArrowNavigation";
 
 export const PageHeader = (props) => {
   const { title, left, right } = props;
-  const [isHover, setIsHover] = useState(false);
+  // const [isHover, setIsHover] = useState(false);
 
-  const handleIsHover = () => {
-    isHover ? setIsHover(false) : setIsHover(true);
-  };
+  // const handleIsHover = () => {
+  //   isHover ? setIsHover(false) : setIsHover(true);
+  // };
 
   return (
     <div className="flex-col flex items-center sm:items-center bg-gray-900">

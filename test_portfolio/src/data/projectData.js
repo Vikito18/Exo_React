@@ -1,32 +1,38 @@
+import pokedex from "../img/pokedex.png";
+import user_api from "../img/user_api.png";
+import country_api from "../img/country_api.png";
+import cooking_app from "../img/cooking_app.png";
+import blog from "../img/blog.png";
+
 export const ProjectData = [
   {
     id: 1,
     title: "Pokedex",
-    img: "../img/pokedex.png",
+    img: pokedex,
     language: ["HTML, JavaScript, CSS"],
   },
   {
     id: 2,
     title: "User API",
-    img: "../img/user_api.png",
+    img: user_api,
     language: ["HTML", "JavaScript", "CSS"],
   },
   {
     id: 3,
     title: "Flag App",
-    img: "../img/country_api.png",
+    img: country_api,
     language: ["React", "Tailwindcss"],
   },
   {
     id: 4,
     title: "Cooking API",
-    img: "../img/cooking_app.png",
+    img: cooking_app,
     language: ["React", "Tailwindcss"],
   },
   {
     id: 5,
     title: "Blog",
-    img: "../img/blog.png",
+    img: blog,
     language: ["React", "Tailwindcss", "json-server"],
   },
 ];
