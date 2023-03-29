@@ -67,7 +67,9 @@ const Cv = () => {
           </ul>
         </MovingComponent>
       </div>
-      <SocialNetwork />
+      <div className="sm:mt-20">
+        <SocialNetwork />
+      </div>
     </Page>
   );
 };

@@ -21,12 +21,14 @@ const Home = () => {
           <img
             src={profile}
             alt="potho_profile"
-            className="w-[30%] rounded-full"
+            className="w-72 h-72 sm:w-96 sm:h-96 rounded-full"
           />
           <DynamicText />
         </div>
       </MovingComponent>
-      <SocialNetwork />
+      <div className="mt-20">
+        <SocialNetwork />
+      </div>
     </Page>
   );
 };
