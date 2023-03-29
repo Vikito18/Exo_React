@@ -13,7 +13,7 @@ const DisplayProject = () => {
         className="w-94 h-64"
       />
       <span>
-        Langage : <strong>{project.language}</strong>>
+        Langage : <strong>{project.language}</strong>
       </span>
     </div>
   ));
