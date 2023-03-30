@@ -1,10 +1,12 @@
 import React from "react";
 import FormContact from "../components/FormContact";
+import Menu from "../components/Menu";
 import Page from "../components/Page";
 
 const Contact = () => {
   return (
     <Page title="" left="/Cv" right="/Projects">
+      <Menu left="/Cv" right="/Projects" />
       <div className="flex flex-col items-center ">
         <h1 className="font-extrabold text-xl">Me contacter</h1>
         <FormContact />

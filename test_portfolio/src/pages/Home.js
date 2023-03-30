@@ -4,10 +4,13 @@ import SocialNetwork from "../components/SocialNetwork";
 import profile from "../img/profile.png";
 import MovingComponent from "react-moving-text";
 import DynamicText from "../components/DynamicText";
+import Menu from "../components/Menu";
 
 const Home = () => {
   return (
     <Page title="Welcome" right="/Cv">
+      <Menu right="/Cv" />
+
       <MovingComponent
         type="fadeInFromLeft"
         duration="1200ms"

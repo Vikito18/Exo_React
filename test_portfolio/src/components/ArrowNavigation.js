@@ -6,14 +6,14 @@ const ArrowNavigation = (page) => {
     <div>
       {page.right && (
         <NavLink to={page.right}>
-          <span className="bg-gray-500 flex justify-center w-20 mt-5 h-20 rounded-full mr-5 text-xxl">
+          <span className="bg-gray-500  flex justify-center items-center rounded-full w-10 h-10  text-xl">
             &#10093;
           </span>
         </NavLink>
       )}
       {page.left && (
         <NavLink to={page.left}>
-          <span className="bg-gray-500 flex justify-center w-20 mt-5 h-20 rounded-full ml-5 text-xxl">
+          <span className=" bg-gray-500 flex justify-center items-center w-10 h-10 rounded-full  text-xl">
             &#10092;
           </span>
         </NavLink>
