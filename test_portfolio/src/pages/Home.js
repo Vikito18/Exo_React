@@ -10,7 +10,7 @@ const Home = () => {
     <Page title="Welcome" right="/Cv">
       <MovingComponent
         type="fadeInFromLeft"
-        duration="1200ms"
+        duration="2000ms"
         delay="0s"
         direction="normal"
         timing="ease"
@@ -25,10 +25,10 @@ const Home = () => {
           />
           <DynamicText />
         </div>
+        <div className="mt-10">
+          <SocialNetwork />
+        </div>
       </MovingComponent>
-      <div className="mt-10">
-        <SocialNetwork />
-      </div>
     </Page>
   );
 };

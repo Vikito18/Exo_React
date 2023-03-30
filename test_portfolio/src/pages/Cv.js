@@ -13,11 +13,11 @@ import SocialNetwork from "../components/SocialNetwork";
 const Cv = () => {
   return (
     <Page title="Mon CV" right="/Contact" left="/">
-      <div className="flex flex-col gap-5 mt-10 mb-5 md:flex-row justify-around items-center w-[100%] font-extrabold">
+      <div className="flex flex-col gap-5 mt-5  md:flex-row justify-around items-center w-[100%] font-extrabold">
         <MovingComponent
           className="flex flex-col items-center rounded-3xl bg-gray-200 border-4 border-cyan-500  w-auto "
           type="fadeInFromLeft"
-          duration="1500ms"
+          duration="2000ms"
           delay="0s"
           direction="normal"
           timing="ease"
@@ -48,7 +48,7 @@ const Cv = () => {
         <MovingComponent
           className="flex flex-col sm:mt-0 justify-center items-center rounded-2xl border-4 border-cyan-500 bg-gray-200  items-center h-full w-72 sm:w-96 "
           type="fadeInFromLeft"
-          duration="800ms"
+          duration="1500ms"
           delay="s"
           direction="normal"
           timing="ease"
