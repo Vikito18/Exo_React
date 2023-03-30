@@ -1,4 +1,5 @@
 import MovingComponent from "react-moving-text";
+import Menu from "./Menu";
 
 export const PageHeader = (props) => {
   const { title } = props;
@@ -25,9 +26,11 @@ export const PageHeader = (props) => {
 };
 
 const Page = (props) => {
-  const { children, title } = props;
+  const { children, title, left, right } = props;
   return (
-    <div className="h-screen w-full overflow-auto bg-gray-900 text-cyan-500 flex flex-col p-0 m-0">
+    <div className="h-screen w-full overflow-auto bg-gray-900 text-cyan-500 flex flex-col pt-5">
+      <Menu left={left} right={right} />
+
       <PageHeader title={title} />
       {children}
     </div>
