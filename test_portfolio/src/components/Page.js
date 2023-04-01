@@ -30,7 +30,6 @@ const Page = (props) => {
   return (
     <div className="h-screen w-full overflow-auto bg-gray-900 font-serif text-cyan-500 flex flex-col pt-5">
       <Menu left={left} right={right} />
-
       <PageHeader title={title} />
       {children}
     </div>
