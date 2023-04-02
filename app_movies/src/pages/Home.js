@@ -23,10 +23,24 @@ const Home = () => {
       <div className="flex flex-col items-center">
         <input
           onChange={handleInput}
-          className="rounded-lg p-2 w-52 text-black"
+          className="rounded-lg p-2 w-52 text-black mb-20"
           type="text"
           placeholder="Nom d'un film"
         />
+        <div className="flex flex-wrap justify-center gap-5">
+          {movies.map((movie) => (
+            <div key={movie.id} className="bg-gray-800 text-center">
+              <h2>{movie.title}</h2>
+              <img
+                className="w-72"
+                src={
+                  "https://image.tmdb.org/t/p/original/" + movie.backdrop_path
+                }
+                alt={"image de " + movie.title}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </Page>
   );

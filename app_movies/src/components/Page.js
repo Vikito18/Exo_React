@@ -3,7 +3,7 @@ import Nav from "./Nav";
 
 const Page = ({ children }) => {
   return (
-    <div className="bg-gray-900 min-h-screen text-white">
+    <div className="bg-black min-h-screen text-white">
       <ul className="flex flex-row gap-5 absolute left-5 top-5 text-xl">
         <Nav path="/" pathName="Home" />
         <Nav path="/Favorite" pathName="Favoris" />
