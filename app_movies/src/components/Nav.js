@@ -5,7 +5,9 @@ const Nav = (props) => {
   const { path, pathName } = props;
   return (
     <NavLink to={path}>
-      <li>{pathName}</li>
+      <li className="list-non bg-cyan-400 rounded-xl p-1 text-black font-bold">
+        {pathName}
+      </li>
     </NavLink>
   );
 };
