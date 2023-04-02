@@ -12,13 +12,18 @@ const Home = () => {
         `https://api.themoviedb.org/3/search/movie?api_key=5b8d228ebdcaadeb58487e4a56841eaf&query=ALL`
       )
       .then((res) => setMovies(res.data.results));
-  });
+  }, [inputValue]);
+
+  const handleInput = (e) => {
+    setInputValue(e.target.value);
+  };
 
   return (
     <Page>
       <div className="flex flex-col items-center">
         <input
-          className="rounded-lg p-2 w-52"
+          onChange={handleInput}
+          className="rounded-lg p-2 w-52 text-black"
           type="text"
           placeholder="Nom d'un film"
         />
