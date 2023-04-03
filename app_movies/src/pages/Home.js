@@ -38,13 +38,13 @@ const Home = () => {
             movies.map((movie) => (
               <div
                 key={movie.id}
-                className="bg-gray-800 rounded-xl  flex flex-col items-center w-80"
+                className="bg-gray-800 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center w-80"
               >
-                <h2 className="text-2xl front-bold text-center">
+                <h2 className="text-2xl front-bold text-center h-16">
                   {movie.title}
                 </h2>
                 <img
-                  className="w-80 h-72 p-2 rounded-2xl"
+                  className="w-[95%] h-72  rounded-2xl shadow-lg shadow-black "
                   src={
                     movie.backdrop_path
                       ? "https://image.tmdb.org/t/p/original/" +
@@ -56,11 +56,19 @@ const Home = () => {
                 <ClampLines
                   id="synopsis"
                   line={10}
-                  text={movie.overview}
-                  className=" m-5 text-center line-clamp-5 bg-gray-900 rounded-lg"
+                  text={`SYNOPSIS : \n ${movie.overview}`}
+                  className=" m-5 text-center line-clamp-3  rounded-lg shadow-lg shadow-black"
                   ellipsis="..."
-                  moreText="Plus"
-                  lessText="Moins"
+                  moreText={
+                    <p className="font-extrabold border border-black">
+                      lire plus ...
+                    </p>
+                  }
+                  lessText={
+                    <p className="font-extrabold border border-black">
+                      lire moins ...
+                    </p>
+                  }
                   innerElement="p"
                 />
                 <span>
