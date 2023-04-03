@@ -77,6 +77,11 @@ const Home = () => {
                 <span>
                   Note : <strong>{movie.vote_average}</strong>
                 </span>
+                <input
+                  type="button"
+                  value="Ajouter aux favoris"
+                  className="bg-cyan-400 text-black rounded-lg p-2 m-5"
+                />
               </div>
             ))
           )}
