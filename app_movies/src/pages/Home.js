@@ -7,7 +7,6 @@ import ClampLines from "react-clamp-lines";
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const [isAdd, setIsAdd] = useState(false);
 
   useEffect(() => {
     axios
@@ -20,11 +19,6 @@ const Home = () => {
   const handleInput = (e) => {
     setInputValue(e.target.value);
   };
-
-  // const handleIsAdd = () => {
-  //   setIsAdd(true);
-  //   localStorage.setItem(movie.title, JSON.stringify(movie));
-  // };
 
   return (
     <Page>
@@ -85,7 +79,6 @@ const Home = () => {
                 </span>
                 <button
                   onClick={() => {
-                    setIsAdd(true);
                     localStorage.setItem(movie.title, JSON.stringify(movie));
                   }}
                   className="bg-cyan-400 text-black rounded-lg p-2 m-5"
