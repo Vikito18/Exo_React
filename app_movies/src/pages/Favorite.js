@@ -4,20 +4,33 @@ import No_Picture from "../images/No_Picture.jpg";
 import ClampLines from "react-clamp-lines";
 
 const Favorite = () => {
-  const [items, setItems] = useState([]);
+  const getKey = Object.entries(localStorage);
 
-  useEffect(() => {
-    const items = JSON.parse(localStorage.getItem(Object.keys));
-    if (items) {
-      setItems(items);
+  let key = [];
+  let movies = [];
+  const get = () => {
+    for (let i = 0; i < getKey.length; i++) {
+      key.push(getKey[i][0]);
     }
-  }, []);
+    return key;
+  };
+  get();
 
-  console.log(items);
+  const getMovie = () => {
+    for (let i = 0; i < key.length; i++) {
+      movies.push(JSON.parse(localStorage.getItem(key[i])));
+    }
+    return movies;
+  };
+
+  getMovie();
+
+  console.log(movies);
+
   return (
     <Page>
       <h1 className="text-center text-xl font-bold">Liste des favoris</h1>
-      {items.map((movie) => (
+      {movies.map((movie) => (
         <div
           key={movie.id}
           className="bg-gray-800 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center w-80"
