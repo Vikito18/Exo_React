@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/search/movie?api_key=5b8d228ebdcaadeb58487e4a56841eaf&query=ALL`
+        `https://api.themoviedb.org/3/search/movie?api_key=5b8d228ebdcaadeb58487e4a56841eaf&query=a`
       )
       .then((res) => setMovies(res.data.results));
   }, [inputValue]);
@@ -29,10 +29,13 @@ const Home = () => {
         />
         <div className="flex flex-wrap justify-center gap-5">
           {movies.map((movie) => (
-            <div key={movie.id} className="bg-gray-800 text-center">
+            <div
+              key={movie.id}
+              className="bg-gray-800 rounded-xl text-center w-80"
+            >
               <h2>{movie.title}</h2>
               <img
-                className="w-72"
+                className="w-80 h-72 p-2 rounded-2xl"
                 src={
                   "https://image.tmdb.org/t/p/original/" + movie.backdrop_path
                 }
