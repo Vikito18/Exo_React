@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Page from "../components/Page";
 import axios from "axios";
 import No_Picture from "../images/No_Picture.jpg";
+import ClampLines from "react-clamp-lines";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -10,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/search/movie?api_key=5b8d228ebdcaadeb58487e4a56841eaf&query=a&language=fr-FR`
+        `https://api.themoviedb.org/3/search/movie?api_key=5b8d228ebdcaadeb58487e4a56841eaf&query=${inputValue}&language=fr-FR`
       )
       .then((res) => setMovies(res.data.results));
   }, [inputValue]);
@@ -29,28 +30,48 @@ const Home = () => {
           placeholder="Nom d'un film"
         />
         <div className="flex flex-wrap justify-center gap-5">
-          {movies.map((movie) => (
-            <div
-              key={movie.id}
-              className="bg-gray-800 rounded-xl  flex flex-col items-center w-80"
-            >
-              <h2 className="text-2xl front-bold text-center">{movie.title}</h2>
-              <img
-                className="w-80 h-72 p-2 rounded-2xl"
-                src={
-                  movie.backdrop_path
-                    ? "https://image.tmdb.org/t/p/original/" +
-                      movie.backdrop_path
-                    : No_Picture
-                }
-                alt={"image de " + movie.title}
-              />
-              <p className="m-5 p-2 bg-gray-900 rounded-xl">{movie.overview}</p>
-              <span>
-                Date de sortie :<strong> {movie.release_date} </strong>
-              </span>
-            </div>
-          ))}
+          {movies === null ? (
+            <span className="text-white font-extrabold mt-10 ">
+              Aucun resultat
+            </span>
+          ) : (
+            movies.map((movie) => (
+              <div
+                key={movie.id}
+                className="bg-gray-800 rounded-xl  flex flex-col items-center w-80"
+              >
+                <h2 className="text-2xl front-bold text-center">
+                  {movie.title}
+                </h2>
+                <img
+                  className="w-80 h-72 p-2 rounded-2xl"
+                  src={
+                    movie.backdrop_path
+                      ? "https://image.tmdb.org/t/p/original/" +
+                        movie.backdrop_path
+                      : No_Picture
+                  }
+                  alt={"image de " + movie.title}
+                />
+                <ClampLines
+                  id="synopsis"
+                  line={10}
+                  text={movie.overview}
+                  className=" m-5 text-center line-clamp-5 bg-gray-900 rounded-lg"
+                  ellipsis="..."
+                  moreText="Plus"
+                  lessText="Moins"
+                  innerElement="p"
+                />
+                <span>
+                  Date de sortie :<strong> {movie.release_date} </strong>
+                </span>
+                <span>
+                  Note : <strong>{movie.vote_average}</strong>
+                </span>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </Page>
