@@ -1,8 +1,67 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Page from "../components/Page";
+import No_Picture from "../images/No_Picture.jpg";
+import ClampLines from "react-clamp-lines";
 
 const Favorite = () => {
-  return <Page></Page>;
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem(Object.keys));
+    if (items) {
+      setItems(items);
+    }
+  }, []);
+
+  console.log(items);
+  return (
+    <Page>
+      <h1 className="text-center text-xl font-bold">Liste des favoris</h1>
+      {items.map((movie) => (
+        <div
+          key={movie.id}
+          className="bg-gray-800 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center w-80"
+        >
+          <h2 className="text-2xl front-bold text-center h-16">
+            {movie.title}
+          </h2>
+          <img
+            className="w-[95%] h-72  rounded-2xl shadow-lg shadow-black "
+            src={
+              movie.backdrop_path
+                ? "https://image.tmdb.org/t/p/original/" + movie.backdrop_path
+                : No_Picture
+            }
+            alt={"image de " + movie.title}
+          />
+          <ClampLines
+            id="synopsis"
+            line={10}
+            text={`SYNOPSIS : \n ${movie.overview}`}
+            className=" m-5 text-center line-clamp-3  rounded-lg shadow-lg shadow-black"
+            ellipsis="..."
+            moreText={
+              <p className="font-extrabold border border-black">
+                lire plus ...
+              </p>
+            }
+            lessText={
+              <p className="font-extrabold border border-black">
+                lire moins ...
+              </p>
+            }
+            innerElement="p"
+          />
+          <span>
+            Date de sortie :<strong> {movie.release_date} </strong>
+          </span>
+          <span>
+            Note : <strong>{movie.vote_average}</strong>
+          </span>
+        </div>
+      ))}
+    </Page>
+  );
 };
 
 export default Favorite;
