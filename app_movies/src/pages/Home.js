@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/search/movie?api_key=5b8d228ebdcaadeb58487e4a56841eaf&query=a`
+        `https://api.themoviedb.org/3/search/movie?api_key=5b8d228ebdcaadeb58487e4a56841eaf&query=a&language=fr-FR`
       )
       .then((res) => setMovies(res.data.results));
   }, [inputValue]);
@@ -32,9 +32,9 @@ const Home = () => {
           {movies.map((movie) => (
             <div
               key={movie.id}
-              className="bg-gray-800 rounded-xl text-center w-80"
+              className="bg-gray-800 rounded-xl  flex flex-col items-center w-80"
             >
-              <h2>{movie.title}</h2>
+              <h2 className="text-2xl front-bold text-center">{movie.title}</h2>
               <img
                 className="w-80 h-72 p-2 rounded-2xl"
                 src={
@@ -45,6 +45,10 @@ const Home = () => {
                 }
                 alt={"image de " + movie.title}
               />
+              <p className="m-5 p-2 bg-gray-900 rounded-xl">{movie.overview}</p>
+              <span>
+                Date de sortie :<strong> {movie.release_date} </strong>
+              </span>
             </div>
           ))}
         </div>
