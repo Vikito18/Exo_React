@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Page from "../components/Page";
 import axios from "axios";
+import No_Picture from "../images/No_Picture.jpg";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -37,7 +38,10 @@ const Home = () => {
               <img
                 className="w-80 h-72 p-2 rounded-2xl"
                 src={
-                  "https://image.tmdb.org/t/p/original/" + movie.backdrop_path
+                  movie.backdrop_path
+                    ? "https://image.tmdb.org/t/p/original/" +
+                      movie.backdrop_path
+                    : No_Picture
                 }
                 alt={"image de " + movie.title}
               />
