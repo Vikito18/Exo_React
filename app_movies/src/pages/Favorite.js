@@ -4,28 +4,29 @@ import No_Picture from "../images/No_Picture.jpg";
 import ClampLines from "react-clamp-lines";
 
 const Favorite = () => {
-  const getKey = Object.entries(localStorage);
-
   let key = [];
   let movies = [];
-  const get = () => {
-    for (let i = 0; i < getKey.length; i++) {
-      key.push(getKey[i][0]);
-    }
-    return key;
+
+  const getLocalStorage = () => {
+    const getKey = Object.entries(localStorage);
+
+    const get = () => {
+      for (let i = 0; i < getKey.length; i++) {
+        key.push(getKey[i][0]);
+      }
+      return key;
+    };
+    get();
+
+    const getMovie = () => {
+      for (let i = 0; i < key.length; i++) {
+        movies.push(JSON.parse(localStorage.getItem(key[i])));
+      }
+      return movies;
+    };
+    getMovie();
   };
-  get();
-
-  const getMovie = () => {
-    for (let i = 0; i < key.length; i++) {
-      movies.push(JSON.parse(localStorage.getItem(key[i])));
-    }
-    return movies;
-  };
-
-  getMovie();
-
-  console.log(movies);
+  getLocalStorage();
 
   return (
     <Page>
@@ -74,9 +75,10 @@ const Favorite = () => {
             </span>
             <button
               onClick={() => {
-                localStorage.setItem(movie.title, JSON.stringify(movie));
+                localStorage.removeItem(movie.title);
+                getLocalStorage();
               }}
-              className="bg-cyan-400 text-black rounded-lg p-2 m-5"
+              className="bg-red-400 text-black rounded-lg p-2 m-5"
             >
               Retirer des favoris
             </button>
