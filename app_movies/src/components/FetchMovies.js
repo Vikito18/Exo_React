@@ -20,7 +20,7 @@ const FetchMovies = ({ value }) => {
     movies.map((movie) => (
       <div
         key={movie.id}
-        className="bg-gray-800 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center w-80"
+        className="bg-gray-800 mb-5 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center w-80"
       >
         <h2 className="text-2xl front-bold text-center h-16">{movie.title}</h2>
         <img
