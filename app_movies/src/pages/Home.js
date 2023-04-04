@@ -19,14 +19,14 @@ const Home = () => {
           type="text"
           placeholder="Nom d'un film"
         />
-        <div className="flex flex-row mb-16">
+        <div className="flex flex-row mb-16 gap-5">
           <input
-            className="rounded-lg bg-cyan-400 p-2 w-52 text-black mb-20"
+            className="rounded-lg bg-cyan-400 w-24 text-black"
             type="button"
             value="Top"
           />
           <input
-            className="rounded-lg bg-cyan-400 p-2 w-52 text-black mb-20"
+            className="rounded-lg bg-cyan-400  w-24 text-black "
             type="button"
             value="Flop"
           />
