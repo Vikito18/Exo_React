@@ -32,11 +32,12 @@ const FetchMovies = ({ value }) => {
           }
           alt={"image de " + movie.title}
         />
+        <h2 className="font-extrabold pl-5 mt-5 flex self-start">Synopsis :</h2>
         <ClampLines
           id="synopsis"
           line={10}
-          text={`SYNOPSIS : \n ${movie.overview}`}
-          className=" m-5 text-center line-clamp-3  rounded-lg shadow-lg shadow-black"
+          text={movie.overview}
+          className=" mb-5 pl-5  line-clamp-3 text-gray-400 rounded-lg shadow-lg shadow-black"
           ellipsis="..."
           moreText={
             <p className="font-extrabold border border-black">lire plus ...</p>
