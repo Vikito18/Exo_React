@@ -34,7 +34,7 @@ const FetchMovies = (props) => {
       .map((movie) => (
         <div
           key={movie.id}
-          className="bg-gray-800 mb-5 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center w-80"
+          className="bg-gray-800 mb-5 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center  w-80"
         >
           <img
             className="w-[95%] h-72  m-5 rounded-2xl shadow-lg shadow-black "
@@ -48,6 +48,15 @@ const FetchMovies = (props) => {
           <h2 className="text-2xl font-bold text-center h-12 mb-5">
             {movie.title}
           </h2>
+          <span className="mb-2">
+            Date de sortie :<strong> {dateFormat(movie.release_date)} </strong>
+          </span>
+          <span>
+            Note :{" "}
+            <strong>
+              {movie.vote_average} / 10 <span>⭐</span>
+            </strong>
+          </span>
           <h2 className="font-extrabold pl-5 mt-5 flex self-start">
             Synopsis :
           </h2>
@@ -69,12 +78,6 @@ const FetchMovies = (props) => {
             }
             innerElement="p"
           />
-          <span>
-            Date de sortie :<strong> {dateFormat(movie.release_date)} </strong>
-          </span>
-          <span>
-            Note : <strong>{movie.vote_average}</strong>
-          </span>
           <button
             onClick={() => {
               localStorage.setItem(movie.title, JSON.stringify(movie));
