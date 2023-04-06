@@ -37,7 +37,7 @@ const FetchMovies = (props) => {
           className="bg-gray-800 mb-5 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center  w-80"
         >
           <img
-            className="w-[95%] h-72  m-5 rounded-2xl shadow-lg shadow-black "
+            className="w-[95%] h-64  m-5 rounded-2xl shadow-lg shadow-black "
             src={
               movie.backdrop_path
                 ? "https://image.tmdb.org/t/p/original/" + movie.backdrop_path
