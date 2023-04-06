@@ -73,14 +73,14 @@ const Cards = ({ movie }) => {
       }
     }
     return genreArray.map((genre) => (
-      <li key={genre} className="bg-gray-900 rounded-xl p-1 h-min">
+      <li key={genre} className="bg-gray-900 rounded-xl p-2 ">
         {genre}
       </li>
     ));
   };
 
   return (
-    <div className="bg-gray-800 mb-5 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center  w-80">
+    <div className="bg-gray-800 mb-5 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center gap-2 w-80">
       <img
         className="w-[95%] h-64  m-5 rounded-2xl shadow-lg shadow-black "
         src={
@@ -90,10 +90,8 @@ const Cards = ({ movie }) => {
         }
         alt={"image de " + movie.title}
       />
-      <h2 className="text-2xl font-bold text-center h-12 mb-8">
-        {movie.title}
-      </h2>
-      <ul className="flex flex-wrap justify-center gap-2 h-20 ">
+      <h2 className="text-2xl font-bold text-center">{movie.title}</h2>
+      <ul className="flex flex-wrap justify-center gap-2">
         {movie.genre_ids ? handleGenre() : null}
       </ul>
       <span>
