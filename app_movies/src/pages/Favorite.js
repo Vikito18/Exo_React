@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Page from "../components/Page";
 import No_Picture from "../images/No_Picture.jpg";
 import ClampLines from "react-clamp-lines";

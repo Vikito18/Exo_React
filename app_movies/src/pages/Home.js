@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Page from "../components/Page";
 
-import FetchMovies from "../components/FetchMovies";
+import Cards from "../components/Cards";
 
 const Home = () => {
   const [inputValue, setInputValue] = useState("code");
   const [selectTri, setSelectTri] = useState([]);
+
+  const [movies, setMovies] = useState([]);
+
   const tri = ["top", "flop"];
+  useEffect(() => {
+    axios
+      .get(
+        `https://api.themoviedb.org/3/search/movie?api_key=5b8d228ebdcaadeb58487e4a56841eaf&query=${inputValue}&language=fr-FR`
+      )
+      .then((res) => setMovies(res.data.results));
+  }, [inputValue]);
 
   const handleInput = (e) => {
     setInputValue(e.target.value);
@@ -38,7 +49,21 @@ const Home = () => {
           ))}
         </div>
         <div className="flex flex-wrap justify-center gap-5">
-          <FetchMovies value={inputValue} select={selectTri} />
+          {movies === null ? (
+            <span className="text-white font-extrabold mt-10 ">
+              Aucun resultat
+            </span>
+          ) : (
+            movies
+              .sort((a, b) => {
+                if (selectTri === "top") {
+                  return b.vote_average - a.vote_average;
+                } else if (selectTri === "flop") {
+                  return a.vote_average - b.vote_average;
+                } else return null;
+              })
+              .map((movie) => <Cards movie={movie} />)
+          )}
         </div>
       </div>
     </Page>
