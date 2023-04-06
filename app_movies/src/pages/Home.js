@@ -5,9 +5,19 @@ import FetchMovies from "../components/FetchMovies";
 
 const Home = () => {
   const [inputValue, setInputValue] = useState("");
+  const [top, setTop] = useState([]);
+  const [flop, setFlop] = useState([]);
 
   const handleInput = (e) => {
     setInputValue(e.target.value);
+  };
+
+  const handleTop = (e) => {
+    setTop(e.target.id);
+  };
+
+  const handleFlop = (e) => {
+    setFlop(e.target.id);
   };
 
   return (
@@ -21,14 +31,18 @@ const Home = () => {
         />
         <div className="flex flex-row mb-16 gap-5">
           <input
+            id="top"
             className="rounded-lg bg-cyan-400 w-24 text-black"
             type="button"
             value="Top"
+            onChange={handleTop}
           />
           <input
+            id="flop"
             className="rounded-lg bg-cyan-400  w-24 text-black "
             type="button"
             value="Flop"
+            onChange={handleFlop}
           />
         </div>
         <div className="flex flex-wrap justify-center gap-5">
