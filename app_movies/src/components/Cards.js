@@ -2,7 +2,7 @@ import React from "react";
 import No_Picture from "../images/No_Picture.jpg";
 import ClampLines from "react-clamp-lines";
 
-const FetchMovies = ({ movie }) => {
+const Cards = ({ movie }) => {
   const dateFormat = (date) => {
     let [yy, mm, dd] = date.split("-");
     return [dd, mm, yy].join("-");
@@ -73,15 +73,14 @@ const FetchMovies = ({ movie }) => {
       }
     }
     return genreArray.map((genre) => (
-      <li className="bg-gray-900 rounded-xl p-1 h-min">{genre}</li>
+      <li key={genre} className="bg-gray-900 rounded-xl p-1 h-min">
+        {genre}
+      </li>
     ));
   };
 
   return (
-    <div
-      key={movie.id}
-      className="bg-gray-800 mb-5 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center  w-80"
-    >
+    <div className="bg-gray-800 mb-5 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center  w-80">
       <img
         className="w-[95%] h-64  m-5 rounded-2xl shadow-lg shadow-black "
         src={
@@ -133,4 +132,4 @@ const FetchMovies = ({ movie }) => {
   );
 };
 
-export default FetchMovies;
+export default Cards;

@@ -62,7 +62,7 @@ const Home = () => {
                   return a.vote_average - b.vote_average;
                 } else return null;
               })
-              .map((movie) => <Cards movie={movie} />)
+              .map((movie) => <Cards movie={movie} key={movie.id} />)
           )}
         </div>
       </div>
