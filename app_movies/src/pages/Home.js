@@ -5,19 +5,15 @@ import FetchMovies from "../components/FetchMovies";
 
 const Home = () => {
   const [inputValue, setInputValue] = useState("");
-  const [top, setTop] = useState([]);
-  const [flop, setFlop] = useState([]);
+  const [selectTri, setSelectTri] = useState([]);
+  const tri = ["top", "flop"];
 
   const handleInput = (e) => {
     setInputValue(e.target.value);
   };
 
-  const handleTop = (e) => {
-    setTop(e.target.id);
-  };
-
-  const handleFlop = (e) => {
-    setFlop(e.target.id);
+  const handleSelecTri = (e) => {
+    setSelectTri(e.target.id);
   };
 
   return (
@@ -30,23 +26,18 @@ const Home = () => {
           placeholder="Nom d'un film"
         />
         <div className="flex flex-row mb-16 gap-5">
-          <input
-            id="top"
-            className="rounded-lg bg-cyan-400 w-24 text-black"
-            type="button"
-            value="Top"
-            onChange={handleTop}
-          />
-          <input
-            id="flop"
-            className="rounded-lg bg-cyan-400  w-24 text-black "
-            type="button"
-            value="Flop"
-            onChange={handleFlop}
-          />
+          {tri.map((sort) => (
+            <input
+              id={sort}
+              className="rounded-lg bg-cyan-400 w-24 text-black"
+              type="button"
+              value={sort}
+              onClick={handleSelecTri}
+            />
+          ))}
         </div>
         <div className="flex flex-wrap justify-center gap-5">
-          <FetchMovies value={inputValue} />
+          <FetchMovies value={inputValue} select={selectTri} />
         </div>
       </div>
     </Page>
