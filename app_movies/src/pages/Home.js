@@ -4,7 +4,7 @@ import Page from "../components/Page";
 import FetchMovies from "../components/FetchMovies";
 
 const Home = () => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState("code");
   const [selectTri, setSelectTri] = useState([]);
   const tri = ["top", "flop"];
 
@@ -27,13 +27,14 @@ const Home = () => {
         />
         <div className="flex flex-row mb-16 gap-5">
           {tri.map((sort) => (
-            <input
+            <button
+              key={sort}
               id={sort}
               className="rounded-lg bg-cyan-400 w-24 text-black"
-              type="button"
-              value={sort}
               onClick={handleSelecTri}
-            />
+            >
+              {sort}
+            </button>
           ))}
         </div>
         <div className="flex flex-wrap justify-center gap-5">
