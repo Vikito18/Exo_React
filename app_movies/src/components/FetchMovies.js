@@ -7,6 +7,11 @@ const FetchMovies = (props) => {
   const { value, select } = props;
   const [movies, setMovies] = useState([]);
 
+  const dateFormat = (date) => {
+    let [yy, mm, dd] = date.split("-");
+    return [dd, mm, yy].join("-");
+  };
+
   useEffect(() => {
     axios
       .get(
@@ -40,7 +45,9 @@ const FetchMovies = (props) => {
             }
             alt={"image de " + movie.title}
           />
-          <h2 className="text-2xl font-bold text-center h-12">{movie.title}</h2>
+          <h2 className="text-2xl font-bold text-center h-12 mb-5">
+            {movie.title}
+          </h2>
           <h2 className="font-extrabold pl-5 mt-5 flex self-start">
             Synopsis :
           </h2>
@@ -63,7 +70,7 @@ const FetchMovies = (props) => {
             innerElement="p"
           />
           <span>
-            Date de sortie :<strong> {movie.release_date} </strong>
+            Date de sortie :<strong> {dateFormat(movie.release_date)} </strong>
           </span>
           <span>
             Note : <strong>{movie.vote_average}</strong>
