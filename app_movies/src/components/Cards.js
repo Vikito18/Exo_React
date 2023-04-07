@@ -79,6 +79,16 @@ const Cards = ({ movie }) => {
     ));
   };
 
+  const storage = () => {
+    let storeData = window.localStorage.movies
+      ? window.localStorage.movies.split(",")
+      : [];
+    if (!storeData.includes(movie.id.toString())) {
+      storeData.push(movie.id);
+      window.localStorage.movies = storeData;
+    }
+  };
+
   return (
     <div className="bg-gray-800 mb-5 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center gap-2 w-80">
       <img
@@ -119,9 +129,7 @@ const Cards = ({ movie }) => {
         innerElement="p"
       />
       <button
-        onClick={() => {
-          localStorage.setItem(movie.title, JSON.stringify(movie));
-        }}
+        onClick={storage}
         className="bg-cyan-400 text-black rounded-lg p-2 m-5"
       >
         Ajouter aux favoris

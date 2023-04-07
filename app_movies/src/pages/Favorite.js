@@ -18,6 +18,8 @@ const Favorite = () => {
     };
     get();
 
+    console.log(window.localStorage.Object.entries());
+
     const getMovie = () => {
       for (let i = 0; i < key.length; i++) {
         movies.push(JSON.parse(localStorage.getItem(key[i])));
