@@ -128,12 +128,21 @@ const Cards = ({ movie }) => {
         }
         innerElement="p"
       />
-      <button
-        onClick={storage}
-        className="bg-cyan-400 text-black rounded-lg p-2 m-5"
-      >
-        Ajouter aux favoris
-      </button>
+      {movie.genre_ids ? (
+        <button
+          onClick={storage}
+          className="bg-cyan-400 text-black rounded-lg p-2 m-5"
+        >
+          Ajouter aux favoris
+        </button>
+      ) : (
+        <button
+          onClick={storage}
+          className="bg-red-400 text-black rounded-lg p-2 m-5"
+        >
+          Retirer des favoris
+        </button>
+      )}
     </div>
   );
 };
