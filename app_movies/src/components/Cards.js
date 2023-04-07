@@ -89,6 +89,12 @@ const Cards = ({ movie }) => {
     }
   };
 
+  const deleteStorage = () => {
+    let storedData = window.localStorage.movies.split(",");
+    let newData = storedData.filter((id) => id != movie.id);
+    window.localStorage.movies = newData;
+    window.location.reload();
+  };
   return (
     <div className="bg-gray-800 mb-5 rounded-xl shadow-lg shadow-gray-500 flex flex-col items-center gap-2 w-80">
       <img
@@ -137,7 +143,7 @@ const Cards = ({ movie }) => {
         </button>
       ) : (
         <button
-          onClick={storage}
+          onClick={deleteStorage}
           className="bg-red-400 text-black rounded-lg p-2 m-5"
         >
           Retirer des favoris
