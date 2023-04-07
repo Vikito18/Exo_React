@@ -7,7 +7,6 @@ const Favorite = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    let moviesList = [];
     let moviesId = window.localStorage.movies
       ? window.localStorage.movies.split(",")
       : [];
@@ -17,17 +16,20 @@ const Favorite = () => {
         .get(
           `https://api.themoviedb.org/3/movie/${moviesId[i]}?api_key=5b8d228ebdcaadeb58487e4a56841eaf`
         )
-        .then((res) => moviesList.push(res.data))
-        .then(() => setData(moviesList));
+        .then((res) => setData((dataMovie) => [...dataMovie, res.data]));
     }
   }, []);
   return (
     <Page>
       <h1 className="text-center text-xl font-bold mb-20">Liste des favoris</h1>
       <div className="flex flex-wrap justify-center gap-5">
-        {data.map((movie) => (
-          <Cards movie={movie} key={movie.id} />
-        ))}
+        {data.length > 0 ? (
+          data.map((movie) => <Cards movie={movie} key={movie.id} />)
+        ) : (
+          <h2 className="text-cyan-400 text-xl font-extrabold">
+            Aucun film ajouté aux favoris
+          </h2>
+        )}
       </div>
     </Page>
   );
