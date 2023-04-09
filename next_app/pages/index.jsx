@@ -9,9 +9,22 @@ const index = () => {
         title="Site web de Victor Dos Martires"
         description="Bienvenue sur le site web de Victor Dos Martires, développeur JavaScript, React.js, Next.js ..."
       />
-      <Title title="Home" />
+      <Title title="Blog" />
     </div>
   );
 };
 
 export default index;
+
+export const getStaticProps = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const article = await res.json();
+
+  // console.log(article);
+
+  return {
+    props: {
+      article,
+    },
+  };
+};
