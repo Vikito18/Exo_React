@@ -1,9 +1,10 @@
+import Title from "@/components/Title";
 import React from "react";
 
 const contact = () => {
   return (
     <div>
-      <h2>Contact</h2>
+      <Title title="Contact" />
     </div>
   );
 };
