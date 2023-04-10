@@ -1,45 +1,38 @@
-import pokedex from "./public/img/pokedex.png";
-import user_api from "./public/img/user_api.png";
-import country_api from "./public/img/country_api.png";
-import cooking_app from "./public/img/cooking_app.png";
-import blog from "./public/img/blog.png";
-import leboncitoyen from "./public/img/leboncitoyen.png";
-
 export const ProjectData = [
   {
     id: 1,
     title: "Pokedex",
-    img: pokedex,
+    img: "./img/pokedex.png",
     language: ["HTML, JavaScript, CSS"],
   },
   {
     id: 2,
     title: "User API",
-    img: user_api,
+    img: "img/user_api.png",
     language: ["HTML, JavaScript, CSS"],
   },
   {
     id: 3,
     title: "Flag App",
-    img: country_api,
+    img: "./img/country_api.png",
     language: ["React, Tailwindcss"],
   },
   {
     id: 4,
     title: "Cooking API",
-    img: cooking_app,
+    img: "./img/cooking_app.png",
     language: ["React, Tailwindcss"],
   },
   {
     id: 5,
     title: "Blog",
-    img: blog,
+    img: "./img/blog.png",
     language: ["React, Tailwindcss, json-server"],
   },
   {
     id: 6,
     title: "LebonCitoyen.fr",
-    img: leboncitoyen,
+    img: "./img/leboncitoyen.png",
     language: ["React, Next.js, Node.js, knex, Express, Objection"],
   },
 ];
