@@ -1,9 +1,9 @@
-import pokedex from "../img/pokedex.png";
-import user_api from "../img/user_api.png";
-import country_api from "../img/country_api.png";
-import cooking_app from "../img/cooking_app.png";
-import blog from "../img/blog.png";
-import leboncitoyen from "../img/leboncitoyen.png";
+import pokedex from "./public/img/pokedex.png";
+import user_api from "./public/img/user_api.png";
+import country_api from "./public/img/country_api.png";
+import cooking_app from "./public/img/cooking_app.png";
+import blog from "./public/img/blog.png";
+import leboncitoyen from "./public/img/leboncitoyen.png";
 
 export const ProjectData = [
   {
