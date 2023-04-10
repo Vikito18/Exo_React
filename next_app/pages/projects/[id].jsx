@@ -1,14 +1,18 @@
+import { path } from "@/config";
 import { ProjectData } from "@/projectData";
+import Image from "next/image";
 import Link from "next/link";
 
 const project = ({ project }) => {
   return (
     <div className="flex flex-col items-center mx-auto">
       <h2 className="text-4xl font-extrabold m-5">{project.title}</h2>
-      <img
+      <Image
         className=" mx-auto border-2 border-pink-600 shadow-xl shadow-black"
-        src={"/" + project.img}
+        src={path + project.img}
         alt={"image du projet: " + project.title}
+        width={600}
+        height={600}
       />
       <p className="m-5 text-xl">
         Langages utilisés : <strong>{project.language}</strong>
