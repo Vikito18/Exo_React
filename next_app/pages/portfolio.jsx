@@ -1,6 +1,7 @@
 import Meta from "@/components/Meta";
 import Title from "@/components/Title";
 import { ProjectData } from "@/projectData";
+import Link from "next/link";
 import React from "react";
 
 const portfolio = () => {
@@ -14,7 +15,8 @@ const portfolio = () => {
 
       <div className="flex flex-wrap justify-center gap-5 mx-auto">
         {ProjectData.map((project) => (
-          <div
+          <Link
+            href={`/projects/${project.id}`}
             key={project.id}
             className="flex flex-col w-72 h-full gap-5 mx-auto bg-gray-200 shadow-lg shadow-black border-2 border-pink-600 rounded-lg p-2"
           >
@@ -27,7 +29,7 @@ const portfolio = () => {
             <p>
               Langage : <strong>{project.language}</strong>
             </p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
