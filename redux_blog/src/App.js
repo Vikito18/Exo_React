@@ -1,5 +1,6 @@
 import React from "react";
 import FormPost from "./components/FormPost";
+import Post from "./components/Post";
 import User from "./components/User";
 
 const App = () => {
@@ -9,6 +10,10 @@ const App = () => {
       <div className="flex flex-row items-center justify-around w-full">
         <FormPost />
         <User />
+      </div>
+      <div className="mt-20">
+        <h2 className=" text-4xl font-extrabold">Les posts</h2>
+        <Post />
       </div>
     </div>
   );
