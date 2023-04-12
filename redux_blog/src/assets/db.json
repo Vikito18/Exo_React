@@ -2,6 +2,7 @@
   "posts" : [
     {
       "author": "From Scratch",
+      "title": "Hello world !" ,
       "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.",
       "likes" : 18,
       "date": 1621530288602,
@@ -9,6 +10,7 @@
     },
     {
       "author": "Bill Gates",
+      "title": "What's up ?" ,
       "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.\n\nLorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.\n\nLorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.\n\nLorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.",
       "likes" : 28,
       "date": 1621536029778,
@@ -17,6 +19,7 @@
     },
     {
       "author": "Mark Zuckerberg",
+      "title": "J'ai rien d'autre à faire" ,
       "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae?",
       "likes" : 8,
       "date": 1621536056135,
@@ -25,6 +28,7 @@
     },
     {
       "author": "Vikito",
+      "title": "Vive le Kebab !!" ,
       "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.\nLorem, ipsum dolor sit amet consectetur adipisicing elit. \n\n",
       "likes" : 12,
       "date": 1679344436248,
@@ -33,6 +37,7 @@
     },
     {
       "author": "LeRelou",
+      "title": "J'aime les cornichons" ,
       "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.",
       "likes" : 25,
       "date": 1679413373753,
@@ -41,6 +46,7 @@
     },
     {
       "author": "Mr Person",
+      "title": "What's up ?" ,
       "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Hello",
       "likes" : 14,
       "date": 1679480891878,
@@ -48,6 +54,7 @@
     },
     {
       "author": "Noob Du Web",
+      "title": "What's up ?" ,
       "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.",
       "likes" : 7,
       "date": 1679489105562,
@@ -55,6 +62,7 @@
     },
     {
       "author": "Vikito",
+      "title": "What's up ?" ,
       "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit.\n\n",
       "likes" : 27,
       "date": 1679489147146,
@@ -62,6 +70,7 @@
     },
     {
       "author": "Pegi",
+      "title": "What's up ?" ,
       "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae.",
       "likes" : 18,
       "date": 1679674804522,
@@ -69,6 +78,7 @@
     },
     {
       "author": "Viki",
+      "title": "What's up ?" ,
       "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloribus vel sunt laborum eos enim odit maxime corporis vero nihil voluptatum a, ullam delectus ad sit. Odit quis adipisci illo sit porro recusandae? Sequi, dolorum repellendus doloremque qui tempora beatae. Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
       "likes" : 18,
       "date": 1679674818539,

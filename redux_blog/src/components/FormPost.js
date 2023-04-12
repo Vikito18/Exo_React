@@ -2,9 +2,9 @@ import React from "react";
 
 const FormPost = () => {
   return (
-    <form className="flex flex-col items-center gap-5 w-[70%]">
+    <form className="flex flex-col text-center items-center m-2 gap-5 w-[70%]">
       <input
-        className="border-2 border-cyan-500 h-12 w-[90%] mx-auto"
+        className="border-2 border-cyan-500 h-12  mx-auto"
         type="text"
         placeholder="Titre du poste"
       />
@@ -13,7 +13,7 @@ const FormPost = () => {
         placeholder="Postez un message ..."
       />
       <input
-        className="bg-cyan-500 rounded-lg text-center p-2 w-24 "
+        className="flex justify-center self-center bg-cyan-500 rounded-lg  p-2 w-24 "
         type="submit"
         value="Enoyer"
       />

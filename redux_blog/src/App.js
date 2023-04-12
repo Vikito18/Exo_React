@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="flex flex-col items-center gap-5">
       <h1 className="text-5xl mb-10 font-extrabold">Blog</h1>
-      <div className="flex flex-row items-center justify-around w-full">
+      <div className="flex flex-row items-center justify-around w-screen">
         <FormPost />
         <User />
       </div>
