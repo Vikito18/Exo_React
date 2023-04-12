@@ -3,10 +3,9 @@ import axios from "axios";
 export const GET_POST = "GET_POST ";
 
 const getPost = () => {
-  return (dispatch) => {
-    return axios
-      .get("http://localhost:3008/posts ")
-      .then((res) => console.log(res.data));
+  return async (dispatch) => {
+    const res = await axios.get("http://localhost:3008/posts ");
+    dispatch({ type: GET_POST, payload: res.data });
   };
 };
 

@@ -1,7 +1,14 @@
+import { GET_POST } from "../actions/post.action";
+
 const initialState = {};
 
 const postReducer = (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case GET_POST:
+      return action.payload;
+    default:
+      return state;
+  }
 };
 
 export default postReducer;
