@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import FormPost from "./components/FormPost";
 import Post from "./components/Post";
 import User from "./components/User";
+import { isEmpty } from "./components/Utils";
 
 const App = () => {
   const posts = useSelector((state) => state.postReducer);
@@ -14,9 +15,10 @@ const App = () => {
         <FormPost />
         <User />
       </div>
-      <div className="mt-20">
+      <div className="mt-20 flex flex-col items-center w-[90%] gap-5">
         <h2 className=" text-4xl font-extrabold">Les posts</h2>
-        {posts && posts.map((post, index) => <Post post={post} key={index} />)}
+        {!isEmpty(posts) &&
+          posts.map((post, index) => <Post post={post} key={index} />)}
       </div>
     </div>
   );

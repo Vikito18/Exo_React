@@ -51,8 +51,8 @@ const Post = ({ post, ...otherProps }) => {
     <div
       className={
         isEdit
-          ? "bg-cyan-100 p-5 shadow-lg  rounded-lg "
-          : "bg-white p-5 shadow-lg  rounded-lg "
+          ? "bg-cyan-100 p-5 shadow-lg w-full rounded-lg border-2 border-cyan-500"
+          : "bg-white p-5 shadow-lg  rounded-lg border-2 border-cyan-500"
       }
     >
       <h2 className="font-extrabold mb-3">{post.author}</h2>
