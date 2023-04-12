@@ -12,7 +12,7 @@ const store = configureStore({
   devTools: true,
 });
 
-store.dispatch(getPost());
+store.dispatch(getPost);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
