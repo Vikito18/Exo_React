@@ -10,7 +10,7 @@ const Meta = ({ title, description }) => {
   );
 };
 
-Meta.defaultPropos = {
+Meta.defaultProps = {
   title: "Site web de Victor Dos Martires",
   description:
     "Bienvenue sur le site web de Victor Dos Martires, développeur JavaScript, React.js, Next.js ...",

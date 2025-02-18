@@ -21,31 +21,13 @@ const Post = ({ post, ...otherProps }) => {
     setIsEdit(true);
   };
 
-  const handleValid = () => {
-    const data = {
-      author: post.author,
-      content: updateContent ? updateContent : post.content,
-      date: post.date,
-      updateDate: Date.now(),
-    };
-
-    axios
-      .put(`http://localhost:3008/posts/${post.id}`, data)
-      .then(() => setIsEdit(false));
-  };
+  const handleValid = () => {};
 
   const handleUpdateContent = (e) => {
     setUpdateContent(e.target.value);
   };
 
-  const handleDelete = () => {
-    if (window.confirm("Supprimer cet post ?")) {
-      axios
-        .delete(`http://localhost:3008/posts/${post.id}`)
-        .then(() => setIsDelete(true))
-        .then(() => window.location.reload());
-    }
-  };
+  const handleDelete = () => {};
 
   return !isDelete ? (
     <div
